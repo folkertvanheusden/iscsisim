@@ -13,3 +13,9 @@ Release Information:
 0.80 beta : Added Halt on Error capability to config.txt
             Added Tcp Reset to ITD files
 	    Fixed ITS sequencing to better handle large data in and data out.
+
+
+
+-----------------------------
+
+Python 2.x -> 3.x conversion by Folkert van Heusden
