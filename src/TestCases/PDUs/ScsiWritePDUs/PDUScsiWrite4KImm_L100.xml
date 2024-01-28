@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="1000">                   <!-- data segment start             -->
-       <FILE>Binaries\Data4K.bin</FILE>  <!-- immediate data              -->
+       <FILE>Binaries/Data4K.bin</FILE>  <!-- immediate data              -->
     </DATA>                             <!-- data segment end                -->
     <DATADIGEST />
 </ISCSIPDU>

@@ -29,16 +29,16 @@
 <ISCSITD>
     <CmdSeqList>
     <CmdSeq Id = "1">
-        <PDU i="1">PDUs\TextPDUs\PDUTReqBrg.xml</PDU>
-        <PDU i="2">PDUs\TextPDUs\PDUTRspBrg.xml</PDU>
+        <PDU i="1">PDUs/TextPDUs/PDUTReqBrg.xml</PDU>
+        <PDU i="2">PDUs/TextPDUs/PDUTRspBrg.xml</PDU>
     </CmdSeq>
     <CmdSeq Id = "2">
-        <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWrite64K_32KI.xml</PDU>
-        <PDU i="2">PDUs\R2Ts\PDUR2T32K_64K.xml</PDU>
-        <PDU i="3">PDUs\DataOutPDUs\PDUDataOutOOO_1.xml</PDU>
-        <PDU i="4">PDUs\DataOutPDUs\PDUDataOutOOO_2.xml</PDU>
-        <PDU i="5">PDUs\DataOutPDUs\PDUDataOutOOO_3.xml</PDU>
-        <PDU i="6">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+        <PDU i="1">PDUs/ScsiWritePDUs/PDUScsiWrite64K_32KI.xml</PDU>
+        <PDU i="2">PDUs/R2Ts/PDUR2T32K_64K.xml</PDU>
+        <PDU i="3">PDUs/DataOutPDUs/PDUDataOutOOO_1.xml</PDU>
+        <PDU i="4">PDUs/DataOutPDUs/PDUDataOutOOO_2.xml</PDU>
+        <PDU i="5">PDUs/DataOutPDUs/PDUDataOutOOO_3.xml</PDU>
+        <PDU i="6">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
     </CmdSeq>
     </CmdSeqList>
     <RunList>

@@ -23,7 +23,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST></HEADERDIGEST>
     <DATA len="8000" compare="True"> <!-- Don't compare data, just BHS     -->
-    <FILE>Binaries\read_32K_2.bin</FILE>
+    <FILE>Binaries/read_32K_2.bin</FILE>
     </DATA>
     <DATADIGEST></DATADIGEST>
 </ISCSIPDU>

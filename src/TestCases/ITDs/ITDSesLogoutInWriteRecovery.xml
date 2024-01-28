@@ -31,33 +31,33 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULogin1.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>0</TRIGGER>  <!-- wait for login1 to complete before sending -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin2.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin2.xml</FILENAME>
       </INPUT>
       <INPUT>
       <TRIGGER>1</TRIGGER>
-         <FILENAME>PDUs\ScsiWritePDUs\PDUScsiWrite128K_64K.xml</FILENAME>
+         <FILENAME>PDUs/ScsiWritePDUs/PDUScsiWrite128K_64K.xml</FILENAME>
       </INPUT>
       <INPUT>  
          <TRIGGER>2</TRIGGER>
-         <FILENAME>PDUs\LogoutPDUs\PDULogoutConnRecovery.xml</FILENAME>
+         <FILENAME>PDUs/LogoutPDUs/PDULogoutConnRecovery.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin1rsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1rsp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1">
-         <FILENAME>PDUs\LoginPDUs\PDULogin2rsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin2rsp.xml</FILENAME>
       </OUTPUT>
       <OUTPUT Index = "2">
-         <FILENAME>PDUs\R2Ts\PDUR2T64K.xml</FILENAME>
+         <FILENAME>PDUs/R2Ts/PDUR2T64K.xml</FILENAME>
       </OUTPUT>
       <OUTPUT Index="3"> 
-         <FILENAME>PDUs\LogoutPDUs\PDULogoutRspOK.xml</FILENAME>
+         <FILENAME>PDUs/LogoutPDUs/PDULogoutRspOK.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

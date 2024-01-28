@@ -22,8 +22,8 @@
 <ISCSITD>
    <CmdSeqList>
    <CmdSeq Id = "1">
-      <PDU i="1">PDUs\TaskManagement\PDUTaskReassignInvalid.xml</PDU>
-      <PDU i="2">PDUs\TaskManagement\PDUInvalidTaskRsp.xml</PDU>
+      <PDU i="1">PDUs/TaskManagement/PDUTaskReassignInvalid.xml</PDU>
+      <PDU i="2">PDUs/TaskManagement/PDUInvalidTaskRsp.xml</PDU>
    </CmdSeq>
    </CmdSeqList>
    <RunList>

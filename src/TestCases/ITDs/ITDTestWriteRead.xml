@@ -26,19 +26,19 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\ScsiWritePDUs\PDUTestWrite.xml</FILENAME>
+         <FILENAME>PDUs/ScsiWritePDUs/PDUTestWrite.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\ScsiReadPDUs\PDUTestRead.xml</FILENAME>
+         <FILENAME>PDUs/ScsiReadPDUs/PDUTestRead.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</FILENAME>
+         <FILENAME>PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1">
-         <FILENAME>PDUs\DataInPDUs\PDUTestDataIn.xml</FILENAME>
+         <FILENAME>PDUs/DataInPDUs/PDUTestDataIn.xml</FILENAME>
       </OUTPUT>
    </OUTFILES>
 </ISCSITD>

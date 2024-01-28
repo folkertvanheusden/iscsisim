@@ -22,19 +22,19 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULogin1.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>0</TRIGGER>  <!-- wait for login1 to complete before sending -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin2_32K.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin2_32K.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index="0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin1rsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1rsp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index="1"> <!-- Login 2 rsp is same as usual   -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin2rsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin2rsp.xml</FILENAME>
       </OUTPUT>
    </OUTFILES>
 </ISCSITD>

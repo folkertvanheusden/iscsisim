@@ -43,7 +43,7 @@
    <FILENAME>ITDLoginNonLoginPdu.xml</FILENAME> 
    -->
    
-   <FILENAME>ITDLoginTransitError.xml</FILENAME>   
+   <FILENAME>ITD/ITDLoginTransitError.xml</FILENAME>   
  </ISCSITS>
    
    

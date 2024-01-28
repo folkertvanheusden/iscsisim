@@ -25,8 +25,8 @@
 <ISCSITD>
 <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiReadBadHdrDigest1K.xml</PDU>
-        <PDU i="2">PDUs\ScsiReadPDUs\PDUScsiReadBadHdrDigest1K.xml</PDU>
+        <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiReadBadHdrDigest1K.xml</PDU>
+        <PDU i="2">PDUs/ScsiReadPDUs/PDUScsiReadBadHdrDigest1K.xml</PDU>
     </CmdSeq>
 </CmdSeqList>
 <RunList>

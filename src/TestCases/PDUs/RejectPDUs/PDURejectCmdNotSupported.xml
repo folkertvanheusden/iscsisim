@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST></HEADERDIGEST>
     <DATA len="30"  compare = "False">
-        <FILE>Binaries\Data4k.bin</FILE>
+        <FILE>Binaries/Data4k.bin</FILE>
     </DATA>
 	<DATADIGEST />
 </ISCSIPDU>

@@ -20,7 +20,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="12C"> 
-	   <FILE>Binaries\login2_MRDSL256K.bin</FILE> 
+	   <FILE>Binaries/login2_MRDSL256K.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

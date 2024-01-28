@@ -27,12 +27,12 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>  <!-- Test 1  -->
-         <FILENAME>PDUs\LoginPDUs\PDULoginTooBig.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginTooBig.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index="0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULoginInitiatorReject.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginInitiatorReject.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

@@ -26,15 +26,15 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\ScsiReadPDUs\PDUScsiReadHdrDigest128K.xml</FILENAME>
+         <FILENAME>PDUs/ScsiReadPDUs/PDUScsiReadHdrDigest128K.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index="0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\DataInPDUs\PDUDataInHdrDigest32K_1.xml</FILENAME>
-         <FILENAME>PDUs\DataInPDUs\PDUDataInHdrDigest32K_2.xml</FILENAME>  
-         <FILENAME>PDUs\DataInPDUs\PDUDataInHdrDigest32K_3.xml</FILENAME>         
-         <FILENAME>PDUs\DataInPDUs\PDUDataInHdrDigest32K_4F.xml</FILENAME>         
+         <FILENAME>PDUs/DataInPDUs/PDUDataInHdrDigest32K_1.xml</FILENAME>
+         <FILENAME>PDUs/DataInPDUs/PDUDataInHdrDigest32K_2.xml</FILENAME>  
+         <FILENAME>PDUs/DataInPDUs/PDUDataInHdrDigest32K_3.xml</FILENAME>         
+         <FILENAME>PDUs/DataInPDUs/PDUDataInHdrDigest32K_4F.xml</FILENAME>         
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

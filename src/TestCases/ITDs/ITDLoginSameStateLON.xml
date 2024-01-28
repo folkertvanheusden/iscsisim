@@ -25,19 +25,19 @@
    <INFILES>      
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULoginStayInLON.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginStayInLON.xml</FILENAME>
       </INPUT>      
       <INPUT>  
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\LogoutPDUs\PDULogoutSession.xml</FILENAME>
+         <FILENAME>PDUs/LogoutPDUs/PDULogoutSession.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> 
-         <FILENAME>PDUs\LoginPDUs\PDULoginStayInLONrsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginStayInLONrsp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1"> 
-          <FILENAME>PDUs\LoginPDUs\PDULoginInvalidReqLogin.xml</FILENAME>
+          <FILENAME>PDUs/LoginPDUs/PDULoginInvalidReqLogin.xml</FILENAME>
       </OUTPUT> 
     </OUTFILES>
 </ISCSITD>

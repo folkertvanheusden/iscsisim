@@ -25,26 +25,26 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULogin1.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1.xml</FILENAME>
       </INPUT>
       <INPUT>  
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULoginStayInLON.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginStayInLON.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>1</TRIGGER>  <!-- wait for login1 to complete before sending -->
-         <FILENAME>PDUs\LoginPDUs\PDULoginTooMuchData.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginTooMuchData.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin1rsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1rsp.xml</FILENAME>
       </OUTPUT>       
       <OUTPUT Index = "1"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULoginStayInLONrsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginStayInLONrsp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "2">
-         <FILENAME>PDUs\LoginPDUs\PDULoginInitiatorReject.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginInitiatorReject.xml</FILENAME>
       </OUTPUT>
    </OUTFILES>
 </ISCSITD>

@@ -22,7 +22,7 @@
     </BHS>                              <!-- basic header segment end        -->
     <HEADERDIGEST />
     <DATA len="1000" compare = "True">
-        <FILE>Binaries\Data4K.bin</FILE>  
+        <FILE>Binaries/Data4K.bin</FILE>  
     </DATA>
     <DATADIGEST />
 </ISCSIPDU>

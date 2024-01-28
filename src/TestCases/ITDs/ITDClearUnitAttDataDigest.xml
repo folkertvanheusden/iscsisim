@@ -21,16 +21,16 @@
 <ISCSITD>
     <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\DataDigests\PDUTestUnitReadyDataDigest.xml</PDU>
-        <PDU i="2">PDUs\DataDigests\PDUScsiUnitAttrspDataDigest.xml</PDU>
+        <PDU i="1">PDUs/DataDigests/PDUTestUnitReadyDataDigest.xml</PDU>
+        <PDU i="2">PDUs/DataDigests/PDUScsiUnitAttrspDataDigest.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\DataDigests\PDUTestUnitReadyDataDigest.xml</PDU>
-        <PDU i="2">PDUs\DataDigests\PDUScsiStatusGoodDataDigest.xml</PDU>
+        <PDU i="1">PDUs/DataDigests/PDUTestUnitReadyDataDigest.xml</PDU>
+        <PDU i="2">PDUs/DataDigests/PDUScsiStatusGoodDataDigest.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="3">
-        <PDU i="1">PDUs\DataDigests\PDUTestUnitReadyDataDigest.xml</PDU>
-        <PDU i="2">PDUs\DataDigests\PDUScsiStatusGoodDataDigest.xml</PDU>
+        <PDU i="1">PDUs/DataDigests/PDUTestUnitReadyDataDigest.xml</PDU>
+        <PDU i="2">PDUs/DataDigests/PDUScsiStatusGoodDataDigest.xml</PDU>
     </CmdSeq>
     </CmdSeqList>
     <RunList>

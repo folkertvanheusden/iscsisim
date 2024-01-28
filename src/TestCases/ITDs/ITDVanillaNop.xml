@@ -24,12 +24,12 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\NopPDUs\PDUNopOut.xml</FILENAME>
+         <FILENAME>PDUs/NopPDUs/PDUNopOut.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index="0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\NopPDUs\PDUNopIn.xml</FILENAME>
+         <FILENAME>PDUs/NopPDUs/PDUNopIn.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

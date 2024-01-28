@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="1e"> 
-	   <FILE>Binaries\textreqMRDSL8k.bin</FILE> 
+	   <FILE>Binaries/textreqMRDSL8k.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

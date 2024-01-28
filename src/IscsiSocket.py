@@ -502,9 +502,9 @@ class IscsiSocket(ISOT.IscsiComms):
                  
          # figure out the data length of this PDU
          """ ******** WARNING - AHS IS NOT SUPPORTED ***************** """
-         readSize = (ord(bhsbuffer[5])<<16) + \
-                    (ord(bhsbuffer[6])<<8) + \
-                    (ord(bhsbuffer[7]))   
+         readSize = (bhsbuffer[5]<<16) + \
+                    (bhsbuffer[6]<<8) + \
+                    (bhsbuffer[7])   
                     
          if readSize:
             # read in the data
@@ -532,7 +532,10 @@ class IscsiSocket(ISOT.IscsiComms):
                     break;
                     
                 readCount -= len(chunkBuffer)
-                dataBuffer += chunkBuffer
+                print(chunkBuffer)
+                print(chunkBuffer.decode('ascii'))
+                print()
+                dataBuffer += chunkBuffer.decode('ascii')
                 if self.terminateAtNextOpportunity:
                     break
             if self.TerminateAtNextOpportunity:
@@ -543,7 +546,7 @@ class IscsiSocket(ISOT.IscsiComms):
             self.AddDataToLogfileBuf(dataBuffer)
                 
             # put databuffer into the String     
-            self.dataString += dataBuffer
+            self.dataString += dataBuffer.encode('ascii')
             
          # write the last line of the log
          self.FinishLogfileBufPdu()
@@ -596,6 +599,9 @@ class IscsiSocket(ISOT.IscsiComms):
       # if max lines exceeded, just return
       if self.logNumLinesThisPDU > self.READ_MAXLINES:
           return
+
+      if type(buf) == type(""):  # hack by FvH
+          buf = buf.encode('ascii')
       
       #  So we start with whatever's currently in logBuf (I hope its the 
       #  header) and whatever line is currently in logAsciiText.  Append
@@ -606,16 +612,15 @@ class IscsiSocket(ISOT.IscsiComms):
       # Use cstring io to try to speed this up.  We're making the output string
       # from the buf passed in.
       cst = io.StringIO()
-
       for c in buf:
          # drop the hex encoded byte into the current logbuf
-         cst.write(" %02x" % ord(c))
+         cst.write(" %02x" % c)
          # now add the character to the ascii encoded string
          # translate tab cr or lf to space.
-         if c in "\r\t\n\0":
+         if chr(c) in "\r\t\n\0":
             self.logAsciiText += ' '
          else:    
-            self.logAsciiText += c
+            self.logAsciiText += chr(c)
          self.logLineCount += 1
 
          if self.logLineCount == self.LINE_SIZE:

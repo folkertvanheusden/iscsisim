@@ -25,12 +25,12 @@
 <ISCSITD>
    <CmdSeqList>
    <CmdSeq Id="1">
-      <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead64KSnack.xml</PDU>
-      <PDU i="2">PDUs\DataInPDUs\PDUDataInSnack64KNoCompare.xml</PDU>
+      <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead64KSnack.xml</PDU>
+      <PDU i="2">PDUs/DataInPDUs/PDUDataInSnack64KNoCompare.xml</PDU>
    </CmdSeq>
    <CmdSeq Id = "2">
-      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackRetransmitImplicit.xml</PDU>
-      <PDU i="2">PDUs\DataInPDUs\PDUDataInSnack64KNoCompare.xml</PDU>
+      <PDU i="1">PDUs/SnackCommandPDUs/PDUSnackRetransmitImplicit.xml</PDU>
+      <PDU i="2">PDUs/DataInPDUs/PDUDataInSnack64KNoCompare.xml</PDU>
    </CmdSeq>
    </CmdSeqList>
    <RunList>

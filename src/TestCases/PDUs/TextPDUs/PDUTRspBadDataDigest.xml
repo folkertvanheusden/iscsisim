@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="30"> 
-	   <FILE>Binaries\treqBadDataDigestMaxRecevDataSegLen.bin</FILE> 
+	   <FILE>Binaries/treqBadDataDigestMaxRecevDataSegLen.bin</FILE> 
 	</DATA>    
 	<DATADIGEST>$DIGEST</DATADIGEST>
 </ISCSIPDU>

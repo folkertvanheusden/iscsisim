@@ -27,7 +27,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="2800">
-        <FILE>Binaries\write_10K_3.bin</FILE>
+        <FILE>Binaries/write_10K_3.bin</FILE>
     </DATA>
     <DATADIGEST>$DIGEST</DATADIGEST>
 </ISCSIPDU>

@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST/>
 	<DATA len="24" compare = "True">	
-	   <FILE>Binaries\unitattrsp.bin</FILE>
+	   <FILE>Binaries/unitattrsp.bin</FILE>
 	</DATA>      
 	<DATADIGEST>$DIGEST</DATADIGEST>
 </ISCSIPDU>

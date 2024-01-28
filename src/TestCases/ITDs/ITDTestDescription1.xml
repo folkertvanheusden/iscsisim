@@ -29,19 +29,19 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\PDUTest1.xml</FILENAME>
+         <FILENAME>PDUs/PDUTest1.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>0</TRIGGER>  <!-- wait for outfile1 to complete before sending -->
-         <FILENAME>PDUs\PDUTestCmdSN.xml</FILENAME>
+         <FILENAME>PDUs/PDUTestCmdSN.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\PDUScsiUnitAtt.xml</FILENAME>
+         <FILENAME>PDUs/PDUScsiUnitAtt.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1">
-         <FILENAME>PDUs\PDUScsiStatusGood.xml</FILENAME>
+         <FILENAME>PDUs/PDUScsiStatusGood.xml</FILENAME>
       </OUTPUT>
    </OUTFILES>
 </ISCSITD>

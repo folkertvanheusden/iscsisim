@@ -24,7 +24,7 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\NopPDUs\PDUNopOutBadITT.xml</FILENAME>
+         <FILENAME>PDUs/NopPDUs/PDUNopOutBadITT.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES></OUTFILES>

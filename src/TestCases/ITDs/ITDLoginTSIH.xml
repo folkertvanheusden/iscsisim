@@ -23,12 +23,12 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDUInitLoginIllegalTSIH.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDUInitLoginIllegalTSIH.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0">
-         <FILENAME>PDUs\LoginPDUs\PDUInitLoginIllegalTSIHRsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDUInitLoginIllegalTSIHRsp.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

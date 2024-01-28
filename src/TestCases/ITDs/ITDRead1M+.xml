@@ -26,13 +26,13 @@
 <ISCSITD>
 <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\TextPDUs\PDUTReqBrg.xml</PDU>
-        <PDU i="2">PDUs\TextPDUs\PDUTRspBrg.xml</PDU>
+        <PDU i="1">PDUs/TextPDUs/PDUTReqBrg.xml</PDU>
+        <PDU i="2">PDUs/TextPDUs/PDUTRspBrg.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead1M+.xml</PDU>
-        <PDU i="2">PDUs\DataInPDUs\PDUDataIn1M_C.xml</PDU>
-        <PDU i="3">PDUs\DataInPDUs\PDUDataIn1M+.xml</PDU>
+        <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead1M+.xml</PDU>
+        <PDU i="2">PDUs/DataInPDUs/PDUDataIn1M_C.xml</PDU>
+        <PDU i="3">PDUs/DataInPDUs/PDUDataIn1M+.xml</PDU>
     </CmdSeq>
 </CmdSeqList>
 <RunList>

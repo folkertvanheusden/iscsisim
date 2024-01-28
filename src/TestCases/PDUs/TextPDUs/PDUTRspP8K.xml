@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="1E"> 
-	   <FILE>Binaries\treqp8k.bin</FILE> 
+	   <FILE>Binaries/treqp8k.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

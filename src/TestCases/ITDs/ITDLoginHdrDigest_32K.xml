@@ -21,12 +21,12 @@
 <ISCSITD>
     <CmdSeqList>
     <CmdSeq Id = "1">
-        <PDU i="1">PDUs\LoginPDUs\PDULogin1.xml</PDU>
-        <PDU i="2">PDUs\LoginPDUs\PDULogin1rsp.xml</PDU>
+        <PDU i="1">PDUs/LoginPDUs/PDULogin1.xml</PDU>
+        <PDU i="2">PDUs/LoginPDUs/PDULogin1rsp.xml</PDU>
     </CmdSeq>
     <CmdSeq Id = "2">
-        <PDU i="1">PDUs\HeaderDigests\PDULogin2HdrDigest_32K.xml</PDU>
-        <PDU i="2">PDUs\HeaderDigests\PDULogin2rspHdrDigest_32K.xml</PDU>
+        <PDU i="1">PDUs/HeaderDigests/PDULogin2HdrDigest_32K.xml</PDU>
+        <PDU i="2">PDUs/HeaderDigests/PDULogin2rspHdrDigest_32K.xml</PDU>
     </CmdSeq>
     </CmdSeqList>
     <RunList>

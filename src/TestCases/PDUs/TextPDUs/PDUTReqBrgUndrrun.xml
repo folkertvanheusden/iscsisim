@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="2C"> 
-	   <FILE>Binaries\treqbrgundrrun.bin</FILE> 
+	   <FILE>Binaries/treqbrgundrrun.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

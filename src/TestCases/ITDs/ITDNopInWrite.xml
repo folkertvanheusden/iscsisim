@@ -28,33 +28,33 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\ScsiWritePDUs\PDUScsiWrite128K_64K.xml</FILENAME>
+         <FILENAME>PDUs/ScsiWritePDUs/PDUScsiWrite128K_64K.xml</FILENAME>
       </INPUT>
       <INPUT>  
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\NopPDUs\PDUNopOut.xml</FILENAME>
+         <FILENAME>PDUs/NopPDUs/PDUNopOut.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>1</TRIGGER>
-         <FILENAME>PDUs\DataOutPDUs\PDUDataOut64K.xml</FILENAME>
+         <FILENAME>PDUs/DataOutPDUs/PDUDataOut64K.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>2</TRIGGER>
-         <FILENAME>PDUs\ScsiReadPDUs\PDUScsiRead128K.xml</FILENAME>
+         <FILENAME>PDUs/ScsiReadPDUs/PDUScsiRead128K.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\R2Ts\PDUR2T64K.xml</FILENAME>
+         <FILENAME>PDUs/R2Ts/PDUR2T64K.xml</FILENAME>
       </OUTPUT>
       <OUTPUT Index="1"> 
-         <FILENAME>PDUs\NopPDUs\PDUNopIn.xml</FILENAME>
+         <FILENAME>PDUs/NopPDUs/PDUNopIn.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "2">
-         <FILENAME>PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</FILENAME>
+         <FILENAME>PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</FILENAME>
       </OUTPUT>
       <OUTPUT Index = "3">
-         <FILENAME>PDUs\DataInPDUs\PDUDataIn128K.xml</FILENAME>
+         <FILENAME>PDUs/DataInPDUs/PDUDataIn128K.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

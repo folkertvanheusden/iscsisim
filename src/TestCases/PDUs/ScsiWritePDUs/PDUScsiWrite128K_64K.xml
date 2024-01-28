@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="10000">                  <!-- data segment start              -->
-       <FILE>Binaries\DataBig.bin</FILE>  <!-- immediate data                -->
+       <FILE>Binaries/DataBig.bin</FILE>  <!-- immediate data                -->
     </DATA>                             <!-- data segment end                -->
     <DATADIGEST />
 </ISCSIPDU>

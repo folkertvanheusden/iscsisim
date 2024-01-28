@@ -28,16 +28,16 @@
 <ISCSITD>
 <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead1MNoAck.xml</PDU>
-        <PDU i="2">PDUs\DataInPDUs\PDUDataIn1M.xml</PDU>
+        <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead1MNoAck.xml</PDU>
+        <PDU i="2">PDUs/DataInPDUs/PDUDataIn1M.xml</PDU>
     </CmdSeq>
    <CmdSeq Id = "2">
-      <PDU i="1">PDUs\LoginPDUs\PDULogin1Reinstate.xml</PDU>
-      <PDU i="2">PDUs\LoginPDUs\PDULogin1rsp.xml</PDU>
+      <PDU i="1">PDUs/LoginPDUs/PDULogin1Reinstate.xml</PDU>
+      <PDU i="2">PDUs/LoginPDUs/PDULogin1rsp.xml</PDU>
    </CmdSeq>
    <CmdSeq Id = "3">
-      <PDU i="1">PDUs\LoginPDUs\PDULogin2Reinstate.xml</PDU>
-      <PDU i="2">PDUs\LoginPDUs\PDULogin2Reinstatersp.xml</PDU>
+      <PDU i="1">PDUs/LoginPDUs/PDULogin2Reinstate.xml</PDU>
+      <PDU i="2">PDUs/LoginPDUs/PDULogin2Reinstatersp.xml</PDU>
    </CmdSeq>
 </CmdSeqList>
 <RunList>

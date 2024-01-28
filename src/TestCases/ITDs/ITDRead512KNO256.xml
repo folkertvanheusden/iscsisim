@@ -27,14 +27,14 @@
 <ISCSITD>
 <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\TextPDUs\PDUTReqP256SG256.xml</PDU>
-        <PDU i="2">PDUs\TextPDUs\PDUTRspBlank.xml</PDU>
+        <PDU i="1">PDUs/TextPDUs/PDUTReqP256SG256.xml</PDU>
+        <PDU i="2">PDUs/TextPDUs/PDUTRspBlank.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead512KNO.xml</PDU>
-        <PDU i="2">PDUs\DataInPDUs\PDUDataIn512KNO_1.xml</PDU>
-        <PDU i="3">PDUs\DataInPDUs\PDUDataIn512KNO_2.xml</PDU>
-        <PDU i="4">PDUs\DataInPDUs\PDUDataIn512KNO_3.xml</PDU>
+        <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead512KNO.xml</PDU>
+        <PDU i="2">PDUs/DataInPDUs/PDUDataIn512KNO_1.xml</PDU>
+        <PDU i="3">PDUs/DataInPDUs/PDUDataIn512KNO_2.xml</PDU>
+        <PDU i="4">PDUs/DataInPDUs/PDUDataIn512KNO_3.xml</PDU>
     </CmdSeq>
 </CmdSeqList>
 <RunList>

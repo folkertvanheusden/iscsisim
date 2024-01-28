@@ -27,13 +27,13 @@
 <ISCSITD>
    <CmdSeqList>
    <CmdSeq Id="1">
-      <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead64K.xml</PDU>
-      <PDU i="2">PDUs\DataInPDUs\PDUDataInTst64KNoCompare.xml</PDU>
+      <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead64K.xml</PDU>
+      <PDU i="2">PDUs/DataInPDUs/PDUDataInTst64KNoCompare.xml</PDU>
    </CmdSeq>
    <CmdSeq Id="2">
-      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackAck.xml</PDU>
-      <PDU i="2">PDUs\ScsiCommandPDUs\PDUTestUnitReady.xml</PDU>
-      <PDU i="3">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+      <PDU i="1">PDUs/SnackCommandPDUs/PDUSnackAck.xml</PDU>
+      <PDU i="2">PDUs/ScsiCommandPDUs/PDUTestUnitReady.xml</PDU>
+      <PDU i="3">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
    </CmdSeq>
    </CmdSeqList>
    <RunList>

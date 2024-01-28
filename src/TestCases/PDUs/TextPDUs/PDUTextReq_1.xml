@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="3C"> 
-	   <FILE>Binaries\splittext_1.bin</FILE> 
+	   <FILE>Binaries/splittext_1.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

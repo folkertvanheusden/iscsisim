@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="20000" compare = "True">
-        <FILE>Binaries\DataBig_64K_2x21K_22K.bin</FILE>
+        <FILE>Binaries/DataBig_64K_2x21K_22K.bin</FILE>
     </DATA>
     <DATADIGEST />
 </ISCSIPDU>

@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="10000"> 
-	   <FILE>Binaries\Data64K.bin</FILE> <!-- What's in it doesn't matter, just that there's too much for the target -->
+	   <FILE>Binaries/Data64K.bin</FILE> <!-- What's in it doesn't matter, just that there's too much for the target -->
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

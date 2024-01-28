@@ -134,7 +134,7 @@ class IscsiIts:
             for fnelem in fnlist:
                # get the name 
                fn_path = fnelem.text
-               fn_path_parts = fn_path.rsplit('\\')
+               fn_path_parts = fn_path.rsplit(os.sep)
                fn = os.path.join(*fn_path_parts)
                # make sure the file exists
                if not os.access(fn,os.R_OK):
@@ -152,7 +152,7 @@ class IscsiIts:
                                  (tm[1],tm[2],tm[0],filename))
          logfile.write("\n*********************************************\n")
 
-                                 
+
          # refresh the counters we're startin' over
          self.curTest = 0
          self.numIters = 1 

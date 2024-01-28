@@ -26,12 +26,12 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\TextPDUs\PDUTReqDataDigestMaxRecvDataSegLength.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTReqDataDigestMaxRecvDataSegLength.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0">
-         <FILENAME>PDUs\TextPDUs\PDUTRspDataDigestMaxRecvDataSegLen.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTRspDataDigestMaxRecvDataSegLen.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

@@ -25,19 +25,19 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULoginContinue.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginContinue.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>0</TRIGGER>  <!-- non-login PDU during login phase- will be rejected -->
-         <FILENAME>PDUs\ScsiCommandPDUs\PDUTestUnitReady.xml</FILENAME>
+         <FILENAME>PDUs/ScsiCommandPDUs/PDUTestUnitReady.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULoginContinuersp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginContinuersp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1">
-         <FILENAME>PDUs\LoginPDUs\PDULoginInvalidPDUReject.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginInvalidPDUReject.xml</FILENAME>
       </OUTPUT>
    </OUTFILES>
 </ISCSITD>

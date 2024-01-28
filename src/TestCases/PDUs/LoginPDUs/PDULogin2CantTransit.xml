@@ -20,7 +20,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="12c"> 
-	   <FILE>Binaries\login2noseqinorder.bin</FILE> 
+	   <FILE>Binaries/login2noseqinorder.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

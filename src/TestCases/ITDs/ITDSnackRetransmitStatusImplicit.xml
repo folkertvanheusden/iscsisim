@@ -27,10 +27,10 @@
 <ISCSITD>
    <CmdSeqList>
    <CmdSeq Id="1">
-      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackResendStatusImplicit.xml</PDU>
-      <PDU i="2">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
-      <PDU i="3">PDUs\DataInPDUs\PDUDataInTst64kNoCompare.xml</PDU>
-      <PDU i="4">PDUs\RejectPDUs\PDURejectProtocol.xml</PDU>
+      <PDU i="1">PDUs/SnackCommandPDUs/PDUSnackResendStatusImplicit.xml</PDU>
+      <PDU i="2">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
+      <PDU i="3">PDUs/DataInPDUs/PDUDataInTst64kNoCompare.xml</PDU>
+      <PDU i="4">PDUs/RejectPDUs/PDURejectProtocol.xml</PDU>
       <!-- We will see reject PDUs here too! -->
    </CmdSeq>
    </CmdSeqList>

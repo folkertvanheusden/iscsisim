@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="1FC00" compare = "True">
-        <FILE>Binaries\newpattern.bin</FILE>
+        <FILE>Binaries/newpattern.bin</FILE>
     </DATA>
     <DATADIGEST />
 </ISCSIPDU>

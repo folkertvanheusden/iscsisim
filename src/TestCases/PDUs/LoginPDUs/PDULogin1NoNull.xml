@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="90"> 
-	   <FILE>Binaries\login1_ipb2600100029.bin</FILE> 
+	   <FILE>Binaries/login1_ipb2600100029.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

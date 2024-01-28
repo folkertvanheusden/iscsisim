@@ -23,12 +23,12 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\ScsiReadPDUs\PDUScsiRead64K.xml</FILENAME>
+         <FILENAME>PDUs/ScsiReadPDUs/PDUScsiRead64K.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index="0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\DataInPDUs\PDUDataIn64KGeneric.xml</FILENAME>
+         <FILENAME>PDUs/DataInPDUs/PDUDataIn64KGeneric.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

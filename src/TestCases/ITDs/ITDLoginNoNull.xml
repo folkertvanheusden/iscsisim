@@ -23,12 +23,12 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULogin1NoNull.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1NoNull.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULoginInitiatorReject.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginInitiatorReject.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

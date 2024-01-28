@@ -24,13 +24,13 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULogin1NoTarget.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1NoTarget.xml</FILENAME>
       </INPUT>
    </INFILES>
    
    <OUTFILES>
       <OUTPUT Index = "0"> 
-         <FILENAME>PDUs\LoginPDUs\PDULoginNoTargetRsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginNoTargetRsp.xml</FILENAME>
       </OUTPUT>
    </OUTFILES>
    

@@ -28,26 +28,26 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\TextPDUs\PDUTextReq_1.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTextReq_1.xml</FILENAME>
       </INPUT>
       <INPUT>  
          <TRIGGER>1</TRIGGER>
-         <FILENAME>PDUs\TextPDUs\PDUTextReq_2.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTextReq_2.xml</FILENAME>
       </INPUT>
       <INPUT>  
          <TRIGGER>2</TRIGGER>
-         <FILENAME>PDUs\TextPDUs\PDUTextReq_3.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTextReq_3.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index="0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\TextPDUs\PDUTextRsp_I.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTextRsp_I.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index="1"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\TextPDUs\PDUTextRsp_I.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTextRsp_I.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index="2"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\TextPDUs\PDUTextRsp_F.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTextRsp_F.xml</FILENAME>
       </OUTPUT>  
    </OUTFILES>
 </ISCSITD>

@@ -25,19 +25,19 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULoginContinue.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginContinue.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>0</TRIGGER>  <!-- wait for login1 to complete before sending -->
-         <FILENAME>PDUs\LoginPDUs\PDULoginBadVersion.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginBadVersion.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULoginContinuersp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginContinuersp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1">
-         <FILENAME>PDUs\LoginPDUs\PDULoginInitiatorReject.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULoginInitiatorReject.xml</FILENAME>
       </OUTPUT>
    </OUTFILES>
 </ISCSITD>

@@ -22,8 +22,8 @@
 <ISCSITD>
    <CmdSeqList>
    <CmdSeq Id = "1">
-      <PDU i="1">PDUs\TaskManagement\PDUTaskReassign1MReadNoAck.xml</PDU>
-      <PDU i="2">PDUs\TaskManagement\PDUTaskRspOk.xml</PDU>
+      <PDU i="1">PDUs/TaskManagement/PDUTaskReassign1MReadNoAck.xml</PDU>
+      <PDU i="2">PDUs/TaskManagement/PDUTaskRspOk.xml</PDU>
    </CmdSeq>
    </CmdSeqList>
    <RunList>

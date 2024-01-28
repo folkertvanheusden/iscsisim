@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="400" compare = "True">
-        <FILE>Binaries\read_64K_200.bin</FILE>   <!-- Random data to throw off the target -->
+        <FILE>Binaries/read_64K_200.bin</FILE>   <!-- Random data to throw off the target -->
     </DATA>
     <DATADIGEST />
 </ISCSIPDU>

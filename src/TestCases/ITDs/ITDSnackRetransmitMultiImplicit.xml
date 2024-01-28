@@ -23,15 +23,15 @@
 <ISCSITD>
 <CmdSeqList>
    <CmdSeq Id="1">
-      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackRetransmitMultiImplicit.xml</PDU>
-      <PDU i="2">PDUs\DataInPDUs\PDUDataIn8kNoFinalNoCompare.xml</PDU>
-      <PDU i="3">PDUs\DataInPDUs\PDUDataIn8kNoFinalNoCompare.xml</PDU>
-      <PDU i="4">PDUs\DataInPDUs\PDUDataIn8kNoFinalNoCompare.xml</PDU>
-      <PDU i="5">PDUs\DataInPDUs\PDUDataIn8kNoFinalNoCompare.xml</PDU>
-      <PDU i="6">PDUs\DataInPDUs\PDUDataIn8kNoFinalNoCompare.xml</PDU>
-      <PDU i="7">PDUs\DataInPDUs\PDUDataIn8kNoFinalNoCompare.xml</PDU>
-      <PDU i="8">PDUs\DataInPDUs\PDUDataIn8kNoFinalNoCompare.xml</PDU>
-      <PDU i="9">PDUs\DataInPDUs\PDUDataIn8kFinalNoCompare.xml</PDU>
+      <PDU i="1">PDUs/SnackCommandPDUs/PDUSnackRetransmitMultiImplicit.xml</PDU>
+      <PDU i="2">PDUs/DataInPDUs/PDUDataIn8kNoFinalNoCompare.xml</PDU>
+      <PDU i="3">PDUs/DataInPDUs/PDUDataIn8kNoFinalNoCompare.xml</PDU>
+      <PDU i="4">PDUs/DataInPDUs/PDUDataIn8kNoFinalNoCompare.xml</PDU>
+      <PDU i="5">PDUs/DataInPDUs/PDUDataIn8kNoFinalNoCompare.xml</PDU>
+      <PDU i="6">PDUs/DataInPDUs/PDUDataIn8kNoFinalNoCompare.xml</PDU>
+      <PDU i="7">PDUs/DataInPDUs/PDUDataIn8kNoFinalNoCompare.xml</PDU>
+      <PDU i="8">PDUs/DataInPDUs/PDUDataIn8kNoFinalNoCompare.xml</PDU>
+      <PDU i="9">PDUs/DataInPDUs/PDUDataIn8kFinalNoCompare.xml</PDU>
    </CmdSeq>
 </CmdSeqList>
 <RunList>

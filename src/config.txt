@@ -9,5 +9,5 @@ tcpport = 3260
 proxyaddress = 127.0.0.1
 
 [SUITE]
-filename = /home/folkert/t/iscsisim/src/TestCases/ITSLogin.xml
+filename = /home/folkert/Projects2/iscsisim/src/TestCases/ITSLogin.xml
 

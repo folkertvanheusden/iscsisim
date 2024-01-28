@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="34"> 
-	   <FILE>Binaries\treqnormrecvlen.bin</FILE> 
+	   <FILE>Binaries/treqnormrecvlen.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

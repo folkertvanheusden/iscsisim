@@ -27,7 +27,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="40000">
-        <FILE>Binaries\newpattern.bin</FILE>
+        <FILE>Binaries/newpattern.bin</FILE>
     </DATA>
     <DATADIGEST />
 </ISCSIPDU>

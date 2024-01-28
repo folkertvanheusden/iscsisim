@@ -214,7 +214,7 @@ class IscsiPdu:
                         
                      if self.dataLen != 0 and data_filename:
                         try:
-                           data_filepath_parts = data_filename.rsplit('\\')
+                           data_filepath_parts = data_filename.rsplit(os.sep)
                            datafilename = os.path.join(*data_filepath_parts)
                            f = open(datafilename,"rb")
                            # read data from the binary file
@@ -300,9 +300,12 @@ class IscsiPdu:
          """
          # self.data has the whole string, replace it
          replCnt = 0
+         print(type(self.KEY_TGTNAME), self.KEY_TGTNAME)
+         print(type(self.data), self.data)
+         print(type(self.config.targetName), self.config.targetName)
          while self.KEY_TGTNAME.encode('ascii') in self.data:
             self.data = self.data.replace(self.KEY_TGTNAME.encode('ascii'),                    \
-                                          self.config.targetName,1)
+                                          self.config.targetName.encode('ascii'),1)
             replCnt += 1
          
          print("replaced %s with %s %d times" %                                \
@@ -372,8 +375,10 @@ class IscsiPdu:
          # add data, padding for 4 byte boundary
          padstr = ""
          if (self.dataLen != 0):
+            print(self.data)
             for c in self.data:
-               retlist.append(ord(c))
+               # print('\t', type(c), c)
+               retlist.append(c)
             if self.dataLen % 4:
                padlen = (4 - self.dataLen % 4)
 
@@ -416,14 +421,14 @@ class IscsiPdu:
          # that might be pulled form the PDU.
          lst = []
          for i in range(IscsiComms.IscsiComms.ISCSI_BHS_SIZE):
-             lst.append(ord(stream[i]))
+             lst.append(stream[i])
          testcase.UpdateReceiveVars(lst)
                
          # pull the BHS from the stream
          offset = 0
          self.dword1 = "%x" % struct.unpack(">L",stream[offset:offset+4])[0]
          offset += 4 
-         self.ahsLen = "%x" % ord(stream[offset])
+         self.ahsLen = "%x" % stream[offset]
          offset += 1
          self.dataSegLen = self.GetThreeBytesFromString(stream,offset)
          offset += 3
@@ -453,7 +458,7 @@ class IscsiPdu:
          if localdataseglen > len(stream):
             stopcondition = len(stream) 
          for i in range(offset,stopcondition+offset):
-            self.data.append(ord(stream[i]))
+            self.data.append(stream[i])
          offset += stopcondition 
             
          #  discard pad
@@ -823,9 +828,9 @@ class IscsiPdu:
       ;
       ************************************************************************
       """
-      dw = (ord(serial[offset+0]) << 16) + \
-           (ord(serial[offset+1]) << 8) + \
-           (ord(serial[offset +2]))
+      dw = (serial[offset+0] << 16) + \
+           (serial[offset+1] << 8) + \
+           (serial[offset +2])
 
       return "%x" % dw
     

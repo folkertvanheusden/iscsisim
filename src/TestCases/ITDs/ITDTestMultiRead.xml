@@ -25,15 +25,15 @@
 <ISCSITD>
 <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\TextPDUs\PDUTextReqRecvDataLen.xml</PDU>
-        <PDU i="2">PDUs\TextPDUs\PDUTRspDontCare.xml</PDU>
+        <PDU i="1">PDUs/TextPDUs/PDUTextReqRecvDataLen.xml</PDU>
+        <PDU i="2">PDUs/TextPDUs/PDUTRspDontCare.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead128K.xml</PDU>
-        <PDU i="2">PDUs\DataInPDUs\PDUDataIn32K_1.xml</PDU>
-        <PDU i="3">PDUs\DataInPDUs\PDUDataIn32K_2.xml</PDU>
-        <PDU i="4">PDUs\DataInPDUs\PDUDataIn32K_3.xml</PDU>
-        <PDU i="5">PDUs\DataInPDUs\PDUDataIn32K_4F.xml</PDU>
+        <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead128K.xml</PDU>
+        <PDU i="2">PDUs/DataInPDUs/PDUDataIn32K_1.xml</PDU>
+        <PDU i="3">PDUs/DataInPDUs/PDUDataIn32K_2.xml</PDU>
+        <PDU i="4">PDUs/DataInPDUs/PDUDataIn32K_3.xml</PDU>
+        <PDU i="5">PDUs/DataInPDUs/PDUDataIn32K_4F.xml</PDU>
     </CmdSeq>
 </CmdSeqList>
 <RunList>

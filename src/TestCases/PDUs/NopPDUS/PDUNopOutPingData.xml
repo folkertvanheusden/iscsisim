@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST></HEADERDIGEST>
     <DATA len="200" >
-      <FILE>Binaries\Data512B.bin</FILE>
+      <FILE>Binaries/Data512B.bin</FILE>
     </DATA>
 	<DATADIGEST></DATADIGEST>
 </ISCSIPDU>

@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="8000">
-        <FILE>Binaries\Data32K_1.bin</FILE>
+        <FILE>Binaries/Data32K_1.bin</FILE>
     </DATA>              
     <DATADIGEST />
 </ISCSIPDU>

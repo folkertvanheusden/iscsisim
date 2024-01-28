@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="200">                    <!-- data segment start              -->
-    <FILE>Binaries\read_16K_200_1.bin</FILE>  <!-- immediate data            -->
+    <FILE>Binaries/read_16K_200_1.bin</FILE>  <!-- immediate data            -->
     </DATA>                             <!-- data segment end                -->
     <DATADIGEST>$DIGEST</DATADIGEST>
 </ISCSIPDU>

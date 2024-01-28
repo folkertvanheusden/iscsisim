@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST>$DIGEST</HEADERDIGEST>
 	<DATA len = "22">
-	    <FILE>Binaries\UnitAttChkCond.bin</FILE>
+	    <FILE>Binaries/UnitAttChkCond.bin</FILE>
 	</DATA>      
 	<DATADIGEST>$DIGEST</DATADIGEST>
 </ISCSIPDU>

@@ -24,7 +24,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="34"> 
-	   <FILE>Binaries\treqPart64K_undrrun.bin</FILE> 
+	   <FILE>Binaries/treqPart64K_undrrun.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

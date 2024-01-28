@@ -27,14 +27,14 @@
 <ISCSITD>
     <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\HeaderDigests\PDUTReqP16SG4HD.xml</PDU>
-        <PDU i="2">PDUs\HeaderDigests\PDUTRspBlankHD.xml</PDU>
+        <PDU i="1">PDUs/HeaderDigests/PDUTReqP16SG4HD.xml</PDU>
+        <PDU i="2">PDUs/HeaderDigests/PDUTRspBlankHD.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\HeaderDigests\PDUScsiWrite60KHD.xml</PDU>
-        <PDU i="2">PDUs\HeaderDigests\PDUR2T60KHD.xml</PDU>
-        <PDU i="3">PDUs\HeaderDigests\PDUDataOut60KHD.xml</PDU>
-        <PDU i="4">PDUs\HeaderDigests\PDUScsiStatusGoodHdrDigest.xml</PDU>
+        <PDU i="1">PDUs/HeaderDigests/PDUScsiWrite60KHD.xml</PDU>
+        <PDU i="2">PDUs/HeaderDigests/PDUR2T60KHD.xml</PDU>
+        <PDU i="3">PDUs/HeaderDigests/PDUDataOut60KHD.xml</PDU>
+        <PDU i="4">PDUs/HeaderDigests/PDUScsiStatusGoodHdrDigest.xml</PDU>
     </CmdSeq>
     </CmdSeqList>
     <RunList>

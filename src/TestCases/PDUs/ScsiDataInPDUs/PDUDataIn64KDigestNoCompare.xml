@@ -23,7 +23,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST></HEADERDIGEST>
     <DATA len="10000" compare="False"> 
-		<FILE>Binaries\DataBig.bin</FILE>  
+		<FILE>Binaries/DataBig.bin</FILE>  
     </DATA>
     <DATADIGEST></DATADIGEST>
 </ISCSIPDU>

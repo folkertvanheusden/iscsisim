@@ -150,7 +150,7 @@ class IscsiItd:
                      pduid = int(pduelem.get("i"))
                      # get the filename 
                      pdu_filename = pduelem.text
-                     pdu_filename_parts = pdu_filename.rsplit('\\')
+                     pdu_filename_parts = pdu_filename.rsplit(os.sep)
                      pdufilename = os.path.join(*pdu_filename_parts)
              
                      pdu = PDU.IscsiPdu()

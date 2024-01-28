@@ -28,26 +28,26 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULogin1.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1.xml</FILENAME>
       </INPUT>
       <INPUT>  
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULogin2CantTransit.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin2CantTransit.xml</FILENAME>
       </INPUT>      
       <INPUT>  
          <TRIGGER>2</TRIGGER>
-         <FILENAME>PDUs\LogoutPDUs\PDULogin2CantTransit.xml</FILENAME>
+         <FILENAME>PDUs/LogoutPDUs/PDULogin2CantTransit.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin1rsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1rsp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1"> 
-          <FILENAME>PDUs\LoginPDUs\PDULogin2CantTransitRsp.xml</FILENAME>
+          <FILENAME>PDUs/LoginPDUs/PDULogin2CantTransitRsp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "2"> 
-         <FILENAME>PDUs\LoginPDUs\PDULogin2CanTransitrsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin2CanTransitrsp.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

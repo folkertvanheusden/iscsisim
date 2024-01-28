@@ -20,5 +20,5 @@
 
 <!-- Execute the login test suite  -->
 <ISCSITS iterations = "1">
-   <FILENAME>ITDs\ITDLogin.xml</FILENAME>
+	<FILENAME>ITDs/ITDLogin.xml</FILENAME>
 </ISCSITS>

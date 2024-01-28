@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="15" compare = "True"> 
-	   <FILE>Binaries\textreqERL.bin</FILE> 
+	   <FILE>Binaries/textreqERL.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

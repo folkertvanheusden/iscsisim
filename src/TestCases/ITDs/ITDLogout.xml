@@ -23,8 +23,8 @@
 <ISCSITD>
    <CmdSeqList>
    <CmdSeq Id = "1">
-      <PDU i="1">PDUs\LogoutPDUs\PDULogoutSession.xml</PDU>
-      <PDU i="2">PDUs\LogoutPDUs\PDULogoutRspOK.xml</PDU>
+      <PDU i="1">PDUs/LogoutPDUs/PDULogoutSession.xml</PDU>
+      <PDU i="2">PDUs/LogoutPDUs/PDULogoutRspOK.xml</PDU>
    </CmdSeq>
    </CmdSeqList>
    <RunList>

@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="3A000" compare = "True">
-        <FILE>Binaries\read_232K_4.bin</FILE>
+        <FILE>Binaries/read_232K_4.bin</FILE>
     </DATA>
     <DATADIGEST />
 </ISCSIPDU>

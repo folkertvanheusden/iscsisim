@@ -29,18 +29,18 @@
 <ISCSITD>
    <CmdSeqList>
         <CmdSeq Id = "1">
-           <PDU i="1">PDUs\TextPDUs\PDUTReqBrg.xml</PDU>
-           <PDU i="2">PDUs\TextPDUs\PDUTRspBrg.xml</PDU>
+           <PDU i="1">PDUs/TextPDUs/PDUTReqBrg.xml</PDU>
+           <PDU i="2">PDUs/TextPDUs/PDUTRspBrg.xml</PDU>
         </CmdSeq>
         <CmdSeq Id = "2">
-           <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWrite1536.xml</PDU>
-           <PDU i="2">PDUs\R2Ts\PDUR2T1536B.xml</PDU>
-           <PDU i="3">PDUs\RejectPDUs\PDURejectInvalidField.xml</PDU>
-           <PDU i="4">PDUs\DataOutPDUs\PDUDataOut1536B.xml</PDU>
-           <PDU i="5">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+           <PDU i="1">PDUs/ScsiWritePDUs/PDUScsiWrite1536.xml</PDU>
+           <PDU i="2">PDUs/R2Ts/PDUR2T1536B.xml</PDU>
+           <PDU i="3">PDUs/RejectPDUs/PDURejectInvalidField.xml</PDU>
+           <PDU i="4">PDUs/DataOutPDUs/PDUDataOut1536B.xml</PDU>
+           <PDU i="5">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
         </CmdSeq>
         <CmdSeq Id = "3">
-           <PDU i="1">PDUs\DataOutPDUs\PDUDataOut1536BadTTT.xml</PDU>
+           <PDU i="1">PDUs/DataOutPDUs/PDUDataOut1536BadTTT.xml</PDU>
         </CmdSeq>
    </CmdSeqList>
    <RunList>

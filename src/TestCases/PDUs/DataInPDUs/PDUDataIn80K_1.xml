@@ -24,7 +24,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST />
     <DATA len="14000" compare = "True">
-        <FILE>Binaries\Data80K_1.bin</FILE>
+        <FILE>Binaries/Data80K_1.bin</FILE>
     </DATA>
     <DATADIGEST />
 </ISCSIPDU>

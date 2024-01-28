@@ -23,7 +23,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST></HEADERDIGEST>
     <DATA len="10000" compare="True"> 
-		<FILE>Binaries\Data64K.bin</FILE>  
+		<FILE>Binaries/Data64K.bin</FILE>  
     </DATA>
     <DATADIGEST></DATADIGEST>
 </ISCSIPDU>

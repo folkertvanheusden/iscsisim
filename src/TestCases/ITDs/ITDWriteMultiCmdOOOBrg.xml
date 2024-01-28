@@ -35,26 +35,26 @@
 <ISCSITD>
     <CmdSeqList>
         <CmdSeq Id = "1">
-            <PDU i="1">PDUs\TextPDUs\PDUTReqBrg.xml</PDU>
-            <PDU i="2">PDUs\TextPDUs\PDUTRspBrg.xml</PDU>
+            <PDU i="1">PDUs/TextPDUs/PDUTReqBrg.xml</PDU>
+            <PDU i="2">PDUs/TextPDUs/PDUTRspBrg.xml</PDU>
         </CmdSeq>
         <CmdSeq Id = "2">
-            <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWriteFoo1.xml</PDU>
-            <PDU i="2">PDUs\R2Ts\PDUR2T64KTst.xml</PDU>
-            <PDU i="3">PDUs\DataOutPDUs\PDUDataOutFoo1.xml</PDU>
-            <PDU i="4">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+            <PDU i="1">PDUs/ScsiWritePDUs/PDUScsiWriteFoo1.xml</PDU>
+            <PDU i="2">PDUs/R2Ts/PDUR2T64KTst.xml</PDU>
+            <PDU i="3">PDUs/DataOutPDUs/PDUDataOutFoo1.xml</PDU>
+            <PDU i="4">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
         </CmdSeq>
         <CmdSeq Id = "3">
-            <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWriteFoo2.xml</PDU>
-            <PDU i="2">PDUs\R2Ts\PDUR2T64KTst.xml</PDU>
-            <PDU i="3">PDUs\DataOutPDUs\PDUDataOutFoo2.xml</PDU>
-            <PDU i="4">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+            <PDU i="1">PDUs/ScsiWritePDUs/PDUScsiWriteFoo2.xml</PDU>
+            <PDU i="2">PDUs/R2Ts/PDUR2T64KTst.xml</PDU>
+            <PDU i="3">PDUs/DataOutPDUs/PDUDataOutFoo2.xml</PDU>
+            <PDU i="4">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
         </CmdSeq>
         <CmdSeq Id = "4">
-            <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWriteFoo3.xml</PDU>
-            <PDU i="2">PDUs\R2Ts\PDUR2T64KTst.xml</PDU>
-            <PDU i="3">PDUs\DataOutPDUs\PDUDataOutFoo3.xml</PDU>
-            <PDU i="4">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+            <PDU i="1">PDUs/ScsiWritePDUs/PDUScsiWriteFoo3.xml</PDU>
+            <PDU i="2">PDUs/R2Ts/PDUR2T64KTst.xml</PDU>
+            <PDU i="3">PDUs/DataOutPDUs/PDUDataOutFoo3.xml</PDU>
+            <PDU i="4">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
         </CmdSeq>
     </CmdSeqList>
     <RunList>

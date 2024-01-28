@@ -27,7 +27,7 @@
     <!-- AHS is not represented -->
     <HEADERDIGEST>$DIGEST</HEADERDIGEST>
     <DATA len="F000">
-        <FILE>Binaries\read_64K_200.bin</FILE>
+        <FILE>Binaries/read_64K_200.bin</FILE>
     </DATA>
     <DATADIGEST />
 </ISCSIPDU>

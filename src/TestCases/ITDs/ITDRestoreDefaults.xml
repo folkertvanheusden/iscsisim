@@ -21,8 +21,8 @@
 <ISCSITD>
 <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\TextPDUs\PDUTextReqNormRecvDataLen.xml</PDU>
-        <PDU i="2">PDUs\TextPDUs\PDUTRspDontCare.xml</PDU>
+        <PDU i="1">PDUs/TextPDUs/PDUTextReqNormRecvDataLen.xml</PDU>
+        <PDU i="2">PDUs/TextPDUs/PDUTRspDontCare.xml</PDU>
     </CmdSeq>
 </CmdSeqList>
 <RunList>

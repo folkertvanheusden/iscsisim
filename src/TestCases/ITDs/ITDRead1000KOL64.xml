@@ -29,28 +29,28 @@
    <INFILES>
          <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\TextPDUs\PDUTReqP256kSG64k.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTReqP256kSG64k.xml</FILENAME>
       </INPUT>
       <INPUT>  
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\ScsiReadPDUs\PDUScsiRead1000KOL.xml</FILENAME>
+         <FILENAME>PDUs/ScsiReadPDUs/PDUScsiRead1000KOL.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\TextPDUs\PDUTRspP256kSG64k.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTRspP256kSG64k.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1">      <!-- First 3 Data Ins are same as a normal 1MB transfer -->
-         <FILENAME>PDUs\DataInPDUs\PDUDataIn1MEP_1.xml</FILENAME>
+         <FILENAME>PDUs/DataInPDUs/PDUDataIn1MEP_1.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "2">
-         <FILENAME>PDUs\DataInPDUs\PDUDataIn1MEP_2.xml</FILENAME>
+         <FILENAME>PDUs/DataInPDUs/PDUDataIn1MEP_2.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "3">
-         <FILENAME>PDUs\DataInPDUs\PDUDataIn1MEP_3.xml</FILENAME>
+         <FILENAME>PDUs/DataInPDUs/PDUDataIn1MEP_3.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "4">
-         <FILENAME>PDUs\DataInPDUs\PDUDataIn1000KOL_4.xml</FILENAME>
+         <FILENAME>PDUs/DataInPDUs/PDUDataIn1000KOL_4.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

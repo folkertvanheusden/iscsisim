@@ -6,16 +6,16 @@
 <ISCSITD>
     <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\HeaderDigests\PDUTestUnitReadyHdrDigest.xml</PDU>
-        <PDU i="2">PDUs\HeaderDigests\PDUScsiUnitAttrspHdrDigest.xml</PDU>
+        <PDU i="1">PDUs/HeaderDigests/PDUTestUnitReadyHdrDigest.xml</PDU>
+        <PDU i="2">PDUs/HeaderDigests/PDUScsiUnitAttrspHdrDigest.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\HeaderDigests\PDUTestUnitReadyHdrDigest.xml</PDU>
-        <PDU i="2">PDUs\HeaderDigests\PDUScsiStatusGoodHdrDigest.xml</PDU>
+        <PDU i="1">PDUs/HeaderDigests/PDUTestUnitReadyHdrDigest.xml</PDU>
+        <PDU i="2">PDUs/HeaderDigests/PDUScsiStatusGoodHdrDigest.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="3">
-        <PDU i="1">PDUs\HeaderDigests\PDUTestUnitReadyHdrDigest.xml</PDU>
-        <PDU i="2">PDUs\HeaderDigests\PDUScsiStatusGoodHdrDigest.xml</PDU>
+        <PDU i="1">PDUs/HeaderDigests/PDUTestUnitReadyHdrDigest.xml</PDU>
+        <PDU i="2">PDUs/HeaderDigests/PDUScsiStatusGoodHdrDigest.xml</PDU>
     </CmdSeq>
     </CmdSeqList>
     <RunList>

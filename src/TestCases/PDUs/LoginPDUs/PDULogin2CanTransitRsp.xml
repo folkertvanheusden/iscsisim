@@ -20,7 +20,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="120" compare = "True"> 
-	   <FILE>Binaries\login2noseqinorderrsp.bin</FILE> 
+	   <FILE>Binaries/login2noseqinorderrsp.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

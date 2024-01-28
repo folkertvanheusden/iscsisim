@@ -26,12 +26,12 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\TextPDUs\PDUTReqBadDataDigest.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTReqBadDataDigest.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0">
-         <FILENAME>PDUs\TextPDUs\PDUTRspBadDataDigest.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTRspBadDataDigest.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

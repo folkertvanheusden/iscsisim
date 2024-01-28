@@ -437,17 +437,16 @@ class TestToolFrame(wx.Frame):
       if dlg.ShowModal() == wx.ID_OK:
           # This returns a Python list of files that were selected.
           filename = dlg.GetFilename()
-           
-           
+
       dlgPath = dlg.GetPath()
-      print(dlgPath)
-      
+
+      # change the working dir to the path where we got the test suite.
+      p = os.path.split(dlgPath)[0]
+      os.chdir(p)
+ 
       # Destroy the dialog. Don't do this until you are done with it!
       # BAD things can happen otherwise!
       dlg.Destroy()
-      
-      # change the working dir to the path where we got the test suite.
-      os.chdir(os.path.split(dlgPath)[0])
       
       # Open the file.  Make a new test suite for safety's sake.
       if filename:

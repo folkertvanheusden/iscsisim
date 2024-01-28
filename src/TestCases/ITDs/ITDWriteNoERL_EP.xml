@@ -28,15 +28,15 @@
 <ISCSITD>
     <CmdSeqList>
     <CmdSeq Id = "1">
-        <PDU i="1">PDUs\TextPDUs\PDUTReqP16SG4.xml</PDU>
-        <PDU i="2">PDUs\TextPDUs\PDUTRspBlank.xml</PDU>
+        <PDU i="1">PDUs/TextPDUs/PDUTReqP16SG4.xml</PDU>
+        <PDU i="2">PDUs/TextPDUs/PDUTRspBlank.xml</PDU>
     </CmdSeq>
     <CmdSeq Id = "2">
-        <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWrite64K_32KI.xml</PDU>
-        <PDU i="2">PDUs\R2Ts\PDUR2T32K_64K.xml</PDU>
-        <PDU i="3">PDUs\DataOutPDUs\PDUDataOut11K_1.xml</PDU>
-        <PDU i="4">PDUs\DataOutPDUs\PDUDataOut10K_3.xml</PDU>
-        <PDU i="5">PDUs\ScsiResponsePDUs\PDUScsiUnitAttrsp.xml</PDU>
+        <PDU i="1">PDUs/ScsiWritePDUs/PDUScsiWrite64K_32KI.xml</PDU>
+        <PDU i="2">PDUs/R2Ts/PDUR2T32K_64K.xml</PDU>
+        <PDU i="3">PDUs/DataOutPDUs/PDUDataOut11K_1.xml</PDU>
+        <PDU i="4">PDUs/DataOutPDUs/PDUDataOut10K_3.xml</PDU>
+        <PDU i="5">PDUs/ScsiResponsePDUs/PDUScsiUnitAttrsp.xml</PDU>
     </CmdSeq>
     </CmdSeqList>
     <RunList>

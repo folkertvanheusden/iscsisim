@@ -20,7 +20,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="6d" login="True"> 
-	   <FILE>Binaries\login1.bin</FILE> 
+	   <FILE>Binaries/login1.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

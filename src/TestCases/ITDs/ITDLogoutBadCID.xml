@@ -27,26 +27,26 @@
    <INFILES>
          <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\LoginPDUs\PDULogin1.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>0</TRIGGER>  <!-- wait for login1 to complete before sending -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin2.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin2.xml</FILENAME>
       </INPUT>
       <INPUT>  
          <TRIGGER>1</TRIGGER>
-         <FILENAME>PDUs\LogoutPDUs\PDULogoutBadCID.xml</FILENAME>
+         <FILENAME>PDUs/LogoutPDUs/PDULogoutBadCID.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\LoginPDUs\PDULogin1rsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin1rsp.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1">
-         <FILENAME>PDUs\LoginPDUs\PDULogin2rsp.xml</FILENAME>
+         <FILENAME>PDUs/LoginPDUs/PDULogin2rsp.xml</FILENAME>
       </OUTPUT>
       <OUTPUT Index="2"> 
-         <FILENAME>PDUs\LogoutPDUs\PDULogoutRspBadCID.xml</FILENAME>
+         <FILENAME>PDUs/LogoutPDUs/PDULogoutRspBadCID.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

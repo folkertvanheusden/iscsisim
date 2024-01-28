@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="24"> 
-	   <FILE>Binaries\treqP256SG256.bin</FILE> 
+	   <FILE>Binaries/treqP256SG256.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

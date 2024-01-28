@@ -18,6 +18,6 @@
  -->
 <!-- Execute the login and out test suite  -->
 <ISCSITS iterations="1">
-   <FILENAME>ITDs\ITDLogin.xml</FILENAME>
-   <FILENAME>ITDs\ITDLogout.xml</FILENAME>
+   <FILENAME>ITDs/ITDLogin.xml</FILENAME>
+   <FILENAME>ITDs/ITDLogout.xml</FILENAME>
 </ISCSITS>

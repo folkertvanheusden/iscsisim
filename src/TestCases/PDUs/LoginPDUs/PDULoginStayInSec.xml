@@ -21,7 +21,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
    <DATA len="9d"> 
-	   <FILE>Binaries\login1_ipb2700100217.bin</FILE> 
+	   <FILE>Binaries/login1_ipb2700100217.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

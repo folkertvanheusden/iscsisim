@@ -27,16 +27,16 @@
 <ISCSITD>
 <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\TextPDUs\PDUTReqP16SG4.xml</PDU>
-        <PDU i="2">PDUs\TextPDUs\PDUTRspBlank.xml</PDU>
+        <PDU i="1">PDUs/TextPDUs/PDUTReqP16SG4.xml</PDU>
+        <PDU i="2">PDUs/TextPDUs/PDUTRspBlank.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead64KNO.xml</PDU>
-        <PDU i="2">PDUs\DataInPDUs\PDUDataIn64KNO_1.xml</PDU>
-        <PDU i="3">PDUs\DataInPDUs\PDUDataIn64KNO_2.xml</PDU>
-        <PDU i="4">PDUs\DataInPDUs\PDUDataIn64KNO_3.xml</PDU>
-        <PDU i="5">PDUs\DataInPDUs\PDUDataIn64KNO_4.xml</PDU>
-        <PDU i="6">PDUs\DataInPDUs\PDUDataIn64KNO_5.xml</PDU>
+        <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead64KNO.xml</PDU>
+        <PDU i="2">PDUs/DataInPDUs/PDUDataIn64KNO_1.xml</PDU>
+        <PDU i="3">PDUs/DataInPDUs/PDUDataIn64KNO_2.xml</PDU>
+        <PDU i="4">PDUs/DataInPDUs/PDUDataIn64KNO_3.xml</PDU>
+        <PDU i="5">PDUs/DataInPDUs/PDUDataIn64KNO_4.xml</PDU>
+        <PDU i="6">PDUs/DataInPDUs/PDUDataIn64KNO_5.xml</PDU>
     </CmdSeq>
 </CmdSeqList>
 <RunList>

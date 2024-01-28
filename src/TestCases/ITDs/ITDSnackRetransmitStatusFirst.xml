@@ -27,8 +27,8 @@
 <ISCSITD>
    <CmdSeqList>
    <CmdSeq Id="1">
-      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackResendStatusFirstPDU.xml</PDU>
-      <PDU i="2">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+      <PDU i="1">PDUs/SnackCommandPDUs/PDUSnackResendStatusFirstPDU.xml</PDU>
+      <PDU i="2">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
    </CmdSeq>
    </CmdSeqList>
    <RunList>

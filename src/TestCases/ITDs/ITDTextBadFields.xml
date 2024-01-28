@@ -24,12 +24,12 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\TextPDUs\PDUTextReqBadFC.xml</FILENAME>
+         <FILENAME>PDUs/TextPDUs/PDUTextReqBadFC.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index="0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\RejectPDUs\PDURejectProtocol.xml</FILENAME>
+         <FILENAME>PDUs/RejectPDUs/PDURejectProtocol.xml</FILENAME>
       </OUTPUT> 
    </OUTFILES>
 </ISCSITD>

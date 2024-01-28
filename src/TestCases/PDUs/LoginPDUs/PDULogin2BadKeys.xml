@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="3d"> 
-	   <FILE>Binaries\login2badkeys.bin</FILE> 
+	   <FILE>Binaries/login2badkeys.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

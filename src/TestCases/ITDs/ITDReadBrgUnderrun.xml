@@ -26,13 +26,13 @@
 <ISCSITD>
 <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\TextPDUs\PDUTReqBrgUndrrun.xml</PDU>
-        <PDU i="2">PDUs\TextPDUs\PDUTRspBlank.xml</PDU>
+        <PDU i="1">PDUs/TextPDUs/PDUTReqBrgUndrrun.xml</PDU>
+        <PDU i="2">PDUs/TextPDUs/PDUTRspBlank.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead128KTst.xml</PDU>
-        <PDU i="2">PDUs\DataInPDUs\PDUDataIn128KUndr.xml</PDU>
-        <PDU i="3">PDUs\ScsiResponsePDUs\PDUScsiRspUnderflow.xml</PDU>
+        <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead128KTst.xml</PDU>
+        <PDU i="2">PDUs/DataInPDUs/PDUDataIn128KUndr.xml</PDU>
+        <PDU i="3">PDUs/ScsiResponsePDUs/PDUScsiRspUnderflow.xml</PDU>
     </CmdSeq>
 </CmdSeqList>
 <RunList>

@@ -23,7 +23,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="30"> 
-	   <FILE>Binaries\treqmaxrecvlen_nopad.bin</FILE> 
+	   <FILE>Binaries/treqmaxrecvlen_nopad.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

@@ -20,7 +20,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST />
 	<DATA len="124" compare = "True"> 
-	   <FILE>Binaries\login2rspDoubleDigest.bin</FILE> 
+	   <FILE>Binaries/login2rspDoubleDigest.bin</FILE> 
 	</DATA>    
 	<DATADIGEST />
 </ISCSIPDU>

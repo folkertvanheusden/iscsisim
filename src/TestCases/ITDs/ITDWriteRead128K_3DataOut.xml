@@ -29,18 +29,18 @@
 <ISCSITD>
    <CmdSeqList>
        <CmdSeq Id = "1">
-          <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWrite128K_64K.xml</PDU>
-          <PDU i="2">PDUs\R2Ts\PDUR2T64K.xml</PDU>
+          <PDU i="1">PDUs/ScsiWritePDUs/PDUScsiWrite128K_64K.xml</PDU>
+          <PDU i="2">PDUs/R2Ts/PDUR2T64K.xml</PDU>
        </CmdSeq>
        <CmdSeq Id = "2">
-          <PDU i="1">PDUs\DataOutPDUs\PDUDataOut21K.xml</PDU>
-          <PDU i="2">PDUs\DataOutPDUs\PDUDataOut21K_2.xml</PDU>
-          <PDU i="3">PDUs\DataOutPDUs\PDUDataOut22K.xml</PDU>
-          <PDU i="4">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+          <PDU i="1">PDUs/DataOutPDUs/PDUDataOut21K.xml</PDU>
+          <PDU i="2">PDUs/DataOutPDUs/PDUDataOut21K_2.xml</PDU>
+          <PDU i="3">PDUs/DataOutPDUs/PDUDataOut22K.xml</PDU>
+          <PDU i="4">PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</PDU>
        </CmdSeq>
        <CmdSeq Id = "3">
-          <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead128K.xml</PDU>
-          <PDU i="2">PDUs\DataInPDUs\PDUDataIn128K_2.xml</PDU>
+          <PDU i="1">PDUs/ScsiReadPDUs/PDUScsiRead128K.xml</PDU>
+          <PDU i="2">PDUs/DataInPDUs/PDUDataIn128K_2.xml</PDU>
        </CmdSeq>
    </CmdSeqList>
    <RunList>

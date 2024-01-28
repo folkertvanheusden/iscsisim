@@ -28,14 +28,14 @@
 <ISCSITD>
     <CmdSeqList>
     <CmdSeq Id="1">
-        <PDU i="1">PDUs\DoubleDigests\PDUTReqP16SG4DD.xml</PDU>
-        <PDU i="2">PDUs\DoubleDigests\PDUTRspBlankDD.xml</PDU>
+        <PDU i="1">PDUs/DoubleDigests/PDUTReqP16SG4DD.xml</PDU>
+        <PDU i="2">PDUs/DoubleDigests/PDUTRspBlankDD.xml</PDU>
     </CmdSeq>
     <CmdSeq Id="2">
-        <PDU i="1">PDUs\DoubleDigests\PDUScsiWrite60KDD.xml</PDU>
-        <PDU i="2">PDUs\DoubleDigests\PDUR2T60KDD.xml</PDU>
-        <PDU i="3">PDUs\DoubleDigests\PDUDataOut60KDD.xml</PDU>
-        <PDU i="4">PDUs\DoubleDigests\PDUScsiStatusGoodDoubleDigest.xml</PDU>
+        <PDU i="1">PDUs/DoubleDigests/PDUScsiWrite60KDD.xml</PDU>
+        <PDU i="2">PDUs/DoubleDigests/PDUR2T60KDD.xml</PDU>
+        <PDU i="3">PDUs/DoubleDigests/PDUDataOut60KDD.xml</PDU>
+        <PDU i="4">PDUs/DoubleDigests/PDUScsiStatusGoodDoubleDigest.xml</PDU>
     </CmdSeq>
     </CmdSeqList>
     <RunList>

@@ -26,19 +26,19 @@
    <INFILES>
       <INPUT>  
          <TRIGGER>$NONE</TRIGGER>
-         <FILENAME>PDUs\DataDigests\PDUScsiWrite512BDataDigest.xml</FILENAME>
+         <FILENAME>PDUs/DataDigests/PDUScsiWrite512BDataDigest.xml</FILENAME>
       </INPUT>
       <INPUT>
          <TRIGGER>0</TRIGGER>
-         <FILENAME>PDUs\DataDigests\PDUScsiRead512BDataDigest.xml</FILENAME>
+         <FILENAME>PDUs/DataDigests/PDUScsiRead512BDataDigest.xml</FILENAME>
       </INPUT>
    </INFILES>
    <OUTFILES>
       <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
-         <FILENAME>PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</FILENAME>
+         <FILENAME>PDUs/ScsiResponsePDUs/PDUScsiStatusGood.xml</FILENAME>
       </OUTPUT> 
       <OUTPUT Index = "1">
-         <FILENAME>PDUs\DataDigests\PDUDataIn512BDataDigest.xml</FILENAME>
+         <FILENAME>PDUs/DataDigests/PDUDataIn512BDataDigest.xml</FILENAME>
       </OUTPUT>
    </OUTFILES>
 </ISCSITD>

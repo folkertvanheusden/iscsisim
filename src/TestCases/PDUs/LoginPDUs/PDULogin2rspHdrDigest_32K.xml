@@ -20,7 +20,7 @@
 	<!-- AHS is not represented -->
 	<HEADERDIGEST></HEADERDIGEST>
 	<DATA len="121"> 
-	   <FILE>Binaries\login2rspHdrDigest_32K.bin</FILE> 
+	   <FILE>Binaries/login2rspHdrDigest_32K.bin</FILE> 
 	</DATA>    
 	<DATADIGEST></DATADIGEST>
 </ISCSIPDU>

@@ -23,20 +23,20 @@
 <ISCSITD>
    <CmdSeqList>
    <CmdSeq Id = "1">
-      <PDU i="1">PDUs\LoginPDUs\PDULogin1.xml</PDU>
-      <PDU i="2">PDUs\LoginPDUs\PDULogin1rsp.xml</PDU>
+      <PDU i="1">PDUs/LoginPDUs/PDULogin1.xml</PDU>
+      <PDU i="2">PDUs/LoginPDUs/PDULogin1rsp.xml</PDU>
    </CmdSeq>
    <CmdSeq Id = "2">
-      <PDU i="1">PDUs\LoginPDUs\PDULogin2.xml</PDU>
-      <PDU i="2">PDUs\LoginPDUs\PDULogin2rsp.xml</PDU>
+      <PDU i="1">PDUs/LoginPDUs/PDULogin2.xml</PDU>
+      <PDU i="2">PDUs/LoginPDUs/PDULogin2rsp.xml</PDU>
    </CmdSeq>
    <CmdSeq Id = "3">
-      <PDU i="1">PDUs\LoginPDUs\PDULogin1NewConn.xml</PDU>
-      <PDU i="2">PDUs\LoginPDUs\PDULogin1rsp.xml</PDU>
+      <PDU i="1">PDUs/LoginPDUs/PDULogin1NewConn.xml</PDU>
+      <PDU i="2">PDUs/LoginPDUs/PDULogin1rsp.xml</PDU>
    </CmdSeq>
    <CmdSeq Id = "4">
-      <PDU i="1">PDUs\LoginPDUs\PDULogin2NewConn.xml</PDU>
-      <PDU i="2">PDUs\LoginPDUs\PDULogin2NewConnrsp.xml</PDU>
+      <PDU i="1">PDUs/LoginPDUs/PDULogin2NewConn.xml</PDU>
+      <PDU i="2">PDUs/LoginPDUs/PDULogin2NewConnrsp.xml</PDU>
    </CmdSeq>
    </CmdSeqList>
    <RunList>
