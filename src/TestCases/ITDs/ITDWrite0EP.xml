@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC  
+                  TX: Text Request (16K partials, 4K SGSize)
+                  RX: Text Response- OK
+                  TX: SCSI READ command (1536 byte read)
+                  RX: Data In (1536 B)
+     /DOC
+-->
+<ISCSITD>
+    <CmdSeqList>
+        <CmdSeq Id = "1">
+            <PDU i="1">PDUs\TextPDUs\PDUTReqP16SG4.xml</PDU>
+            <PDU i="2">PDUs\TextPDUs\PDUTRspBlank.xml</PDU>
+        </CmdSeq>
+        <CmdSeq Id = "2">
+            <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWrite0.xml</PDU>
+            <PDU i="2">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+        </CmdSeq>
+    </CmdSeqList>
+    <RunList>
+        <R>(1,1)</R>
+        <R Trig="(1,2)">(2,1)</R>
+        <R Trig="(2,2)"/>
+    </RunList>
+</ISCSITD>

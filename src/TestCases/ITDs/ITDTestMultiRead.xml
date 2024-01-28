@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC     TX: SCSI READ command (128K of data)
+             RX: 32K DataIn (no compare on data)
+             RX: 32K DataIn (no compare on data)
+             RX: 32K DataIn (no compare on data)
+             RX: 32K DataIn (no compare on data, F,A,S bits set)
+     /DOC
+-->
+<ISCSITD>
+<CmdSeqList>
+    <CmdSeq Id="1">
+        <PDU i="1">PDUs\TextPDUs\PDUTextReqRecvDataLen.xml</PDU>
+        <PDU i="2">PDUs\TextPDUs\PDUTRspDontCare.xml</PDU>
+    </CmdSeq>
+    <CmdSeq Id="2">
+        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead128K.xml</PDU>
+        <PDU i="2">PDUs\DataInPDUs\PDUDataIn32K_1.xml</PDU>
+        <PDU i="3">PDUs\DataInPDUs\PDUDataIn32K_2.xml</PDU>
+        <PDU i="4">PDUs\DataInPDUs\PDUDataIn32K_3.xml</PDU>
+        <PDU i="5">PDUs\DataInPDUs\PDUDataIn32K_4F.xml</PDU>
+    </CmdSeq>
+</CmdSeqList>
+<RunList>
+    <R>(1,1)</R>
+    <R Trig="(1,2)">(2,1)</R>
+    <R Trig="(2,2)"/>
+    <R Trig="(2,3)"/>
+    <R Trig="(2,4)"/>
+    <R Trig="(2,5)"/>
+</RunList>
+</ISCSITD>

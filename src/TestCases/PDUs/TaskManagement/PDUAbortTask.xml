@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUAbortTask.xml                      -->
+<!-- Command:        0x02 - Task Mgmt                     -->
+<!-- Tfer Size: 0                                 -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Issue Abort Task for      -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>02810000</DWORD1> <!-- function 1 is abort task  -->
+		<AHSLEN>00</AHSLEN>   <!-- Must be 0 for logout response  -->
+		<DATASEGLEN>00</DATASEGLEN> <!-- Must be 0 for logout response  -->
+		<LUN>0001000000000000</LUN>	
+		<ITT>f00f01</ITT>
+		<DW20>f00f00</DW20> <!-- Referenced Task Tag -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>00</DW32>
+		<DW36>00</DW36>
+		<DW40>00</DW40>
+		<DW44>00</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA></DATA>    
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

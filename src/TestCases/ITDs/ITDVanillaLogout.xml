@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--  Test description file for basic logout. -->
+<!-- This is a test description File. It contains one test.  
+        Test description files have a ITD prefix by convention, and describe a 
+        single iscsi test case.  Test description files are the middle file in 
+        the test framework. Each test case will most likely begin with a login 
+        and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC     
+             TX: Login Part 1
+             RX: Login Response 1
+             TX: Login Part 2
+             RX: Login Response 2
+             TX: Session Logout
+             RX: Logout Reponse
+     /DOC -->
+<ISCSITD>
+   <INFILES>
+         <INPUT>  
+         <TRIGGER>$NONE</TRIGGER>
+         <FILENAME>PDUs\LoginPDUs\PDULogin1.xml</FILENAME>
+      </INPUT>
+      <INPUT>
+         <TRIGGER>0</TRIGGER>  <!-- wait for login1 to complete before sending -->
+         <FILENAME>PDUs\LoginPDUs\PDULogin2.xml</FILENAME>
+      </INPUT>
+      <INPUT>  
+         <TRIGGER>1</TRIGGER>
+         <FILENAME>PDUs\LogoutPDUs\PDULogoutSession.xml</FILENAME>
+      </INPUT>
+   </INFILES>
+   <OUTFILES>
+      <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
+         <FILENAME>PDUs\LoginPDUs\PDULogin1rsp.xml</FILENAME>
+      </OUTPUT> 
+      <OUTPUT Index = "1">
+         <FILENAME>PDUs\LoginPDUs\PDULogin2rsp.xml</FILENAME>
+      </OUTPUT>
+      <OUTPUT Index="2"> 
+         <FILENAME>PDUs\LogoutPDUs\PDULogoutRspOK.xml</FILENAME>
+      </OUTPUT> 
+   </OUTFILES>
+</ISCSITD>

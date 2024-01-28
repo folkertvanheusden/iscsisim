@@ -1,0 +1,28 @@
+﻿<!-- Filename:       PDUR2T512B.xml                   -->
+<!-- Command:        0x31 - Ready To Transfer         -->
+<!-- Desired Tfer:   512B                              -->
+<!-- Immediate data: X                                -->
+<!-- Function:       R2T host response for 512B        -->
+
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>31800000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0000000100000000</LUN>     <!-- logical unit number             -->
+        <ITT>$ITT</ITT>                 <!-- initiator task tag              -->
+        <DW20>$TTT</DW20>               <!-- target transfer tag             -->
+        <DW24>$X</DW24>                 <!-- StatSN                          -->
+        <DW28>$X</DW28>                 <!-- ExpCmdSN                        -->
+        <DW32>$X</DW32>                 <!-- MaxCmdSN                        -->
+        <DW36>$X</DW36>                 <!-- R2TSN                           -->
+        <DW40>$X</DW40>                 <!-- Buffer Offset                   -->
+        <DW44>00000200</DW44>           <!-- Desired data trans. length      -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA />
+    <DATADIGEST />
+</ISCSIPDU>

@@ -1,0 +1,29 @@
+﻿<!-- Filename:       PDUScsiRead1536B.xml                -->
+<!-- Command:        0x01 - SCSI Command                -->
+<!-- Tfer Size:      1.5 KB                               -->
+<!-- Immediate data: No                                 -->
+<!-- Function:       Read 1.5 K (1536 bytes) from LUN 0          -->
+<!-- Just over the MTU size- a good ethernet frame test -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>41C00000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>1337</ITT>             <!-- initiator task tag              -->
+        <DW20>000600</DW20>             <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>28000000</DW32>           <!-- command descriptor block start  -->
+        <DW36>01000000</DW36>           <!-- LBA = 100 -->
+        <DW40>03000000</DW40>           <!-- 0003 blocks = 1536 bytes -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA />
+    <DATADIGEST />
+</ISCSIPDU>

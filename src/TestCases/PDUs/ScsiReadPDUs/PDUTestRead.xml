@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTestRead.xml                    -->
+<!-- Command:        0x01 - SCSI Command                -->
+<!-- Tfer Size:      8K                                 -->
+<!-- Immediate data: No                                 -->
+<!-- Function:       Read 8K bytes from LUN 0           -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>41400000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>00000001</ITT>             <!-- initiator task tag              -->
+        <DW20>002000</DW20>             <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>28000000</DW32>           <!-- command descriptor block start  -->
+        <DW36>02000000</DW36>
+        <DW40>10000000</DW40>           <!-- read 0x10 blocks (8K)           -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST></HEADERDIGEST>
+    <DATA></DATA>
+    <DATADIGEST></DATADIGEST>
+</ISCSIPDU>

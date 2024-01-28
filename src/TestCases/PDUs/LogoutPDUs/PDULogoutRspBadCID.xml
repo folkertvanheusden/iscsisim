@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDULogoutRspBadCID.xml                      -->
+<!-- Command:        0x26 - Logout Response                     -->
+<!-- Tfer Size: Bhs-Size                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Logout Response- Logout CID not found     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>26800100</DWORD1> <!-- 3rd byte is response code  -->
+		<AHSLEN>00</AHSLEN>   <!-- Must be 0 for logout response  -->
+		<DATASEGLEN>00</DATASEGLEN> <!-- Must be 0 for logout response  -->
+		<LUN>$X</LUN>	
+		<ITT>$ITT</ITT>
+		<DW20>$X</DW20>
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>$X</DW40>
+		<DW44>$X</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA></DATA>    
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

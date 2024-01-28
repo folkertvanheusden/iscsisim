@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test suite  File. It contains a series of tests, intended
+      to be run over and over.   Test cases will be run in the order that
+      they appear in this file. 
+        Test suite files have a ITS prefix by convention, and 
+        describe a set of iscsi test cases.  Test suite files 
+        are the top file in the test framework.  
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+ <!-- Tests different login permutations  -->
+<ISCSITS iterations="1">
+  <!-- LOGIN TESTS -->
+   <!-- 
+   <FILENAME>ITDLoginPrePDU.xml</FILENAME>
+   <FILENAME>ITDLoginSecToFF.xml</FILENAME>
+   <FILENAME>ITDLoginBadCSGNSG.xml</FILENAME>
+   <FILENAME>ITDLoginSameStateSec.xml</FILENAME>
+   <FILENAME>ITDLoginSameStateLON.xml</FILENAME>
+   <FILENAME>ITDLoginBadCSGNoT.xml</FILENAME>
+   <FILENAME>ITDLoginBadVersion.xml</FILENAME>
+   <FILENAME>ITDLogin_32K.xml</FILENAME>
+   <FILENAME>ITDLogout.xml</FILENAME> --><!-- Needed to Logout of Login_32K  -->  
+   
+   <!-- Good case    
+   <FILENAME>ITDLogin3Continue.xml</FILENAME>    
+   <FILENAME>ITDLoginContinueBadVersion.xml</FILENAME>
+   <FILENAME>ITDLoginContinueNonLogin.xml</FILENAME> 
+   <FILENAME>ITDLoginNoNull.xml</FILENAME>  
+   <FILENAME>ITDLoginBadKeys.xml</FILENAME> 
+   <FILENAME>ITDDoubleLogin.xml</FILENAME> 
+   <FILENAME>ITDLoginTooBig.xml</FILENAME>
+   <FILENAME>ITDLoginContinueTooMuchData.xml</FILENAME>      
+   <FILENAME>ITDLoginTSIH.xml</FILENAME>   
+   <FILENAME>ITDLogin1NoTarget.xml</FILENAME>
+   <FILENAME>ITDLoginNonLoginPdu.xml</FILENAME> 
+   -->
+   
+   <FILENAME>ITDLoginTransitError.xml</FILENAME>   
+ </ISCSITS>
+   
+   

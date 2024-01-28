@@ -1,0 +1,28 @@
+﻿<!-- Filename:       PDUScsiWrite1M.xml              -->
+<!-- Command:        0x01 - SCSI command              -->
+<!-- Tfer Size:      1MB                              -->
+<!-- Immediate data: No                         -->
+<!-- Function:       Write 1M to LUN 0               -->
+
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>01A00000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>B0075</ITT>             <!-- initiator task tag              -->
+        <DW20>00100000</DW20>           <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>2A000000</DW32>           <!-- command descriptor block start- WRITE (10) -->
+        <DW36>00000008</DW36>           <!-- LBA = 0                       -->
+        <DW40>00000000</DW40>           <!-- write 0x800 blocks: 1MB         -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA></DATA>
+    <DATADIGEST />
+</ISCSIPDU>

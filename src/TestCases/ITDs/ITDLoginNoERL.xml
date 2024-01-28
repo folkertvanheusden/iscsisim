@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Test description file for login with an Error Recovery Level of 0. -->
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!--   send login 1, wait for response, send login 2 -->
+<ISCSITD>
+   <CmdSeqList>
+   <CmdSeq Id = "1">
+      <PDU i="1">PDUs\LoginPDUs\PDULogin1.xml</PDU>
+      <PDU i="2">PDUs\LoginPDUs\PDULogin1rsp.xml</PDU>
+   </CmdSeq>
+   <CmdSeq Id = "2">
+      <PDU i="1">PDUs\LoginPDUs\PDULogin2NoERL.xml</PDU>
+      <PDU i="2">PDUs\LoginPDUs\PDULogin2NoERLrsp.xml</PDU>
+   </CmdSeq>
+   </CmdSeqList>
+   <RunList>
+      <R>(1,1)</R>
+      <R Trig="(1,2)">(2,1)</R>
+      <R Trig="(2,2)"/>
+   </RunList>
+</ISCSITD>

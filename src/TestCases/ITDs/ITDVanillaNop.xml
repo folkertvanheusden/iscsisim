@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC     
+             TX: NOP Out.  
+             RX: NOP In
+     /DOC
+-->
+<ISCSITD>
+   <INFILES>
+      <INPUT>  
+         <TRIGGER>$NONE</TRIGGER>
+         <FILENAME>PDUs\NopPDUs\PDUNopOut.xml</FILENAME>
+      </INPUT>
+   </INFILES>
+   <OUTFILES>
+      <OUTPUT Index="0"> <!-- INDEXES START AT 0!!! -->
+         <FILENAME>PDUs\NopPDUs\PDUNopIn.xml</FILENAME>
+      </OUTPUT> 
+   </OUTFILES>
+</ISCSITD>

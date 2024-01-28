@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTRspP8K.xml                      -->
+<!-- Command:        0x24 - Text Response                    -->
+<!-- Tfer Size: Bhs-Size + 1D                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Text Response to negotiate an 8K Partial size     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>24800000</DWORD1> <!-- Final bit set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>1D</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>   <!-- Appropriate value when F bit is set  -->
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>$X</DW40>
+		<DW44>$X</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="1E"> 
+	   <FILE>Binaries\treqp8k.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

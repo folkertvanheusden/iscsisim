@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUScsiRspOutOfRangeLBA.xml            -->
+<!-- Command:        0x21 - SCSI Response             -->
+<!-- Tfer Size:      0                                -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Returns status CHECK_CONDITION   -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>21820002</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>$X</DATASEGLEN>
+		<LUN>0000000100000000</LUN>
+		<ITT>$ITT</ITT>
+		<DW20>00000000</DW20>
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>10000</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA>	</DATA>      
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

@@ -1,0 +1,13 @@
+[PROJECT]
+comms = TCP
+targetname = iqn.1993-11.com.vanheusden:test
+haltonerror = False
+
+[TCP]
+ipaddress = 192.168.64.206
+tcpport = 3260
+proxyaddress = 127.0.0.1
+
+[SUITE]
+filename = /home/folkert/t/iscsisim/src/TestCases/ITSLogin.xml
+

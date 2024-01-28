@@ -1,0 +1,33 @@
+<!-- Filename:       PDUDataOut32K_BAU1.xml           -->
+<!-- Command:        0x05 - SCSI Data-Out             -->
+<!-- Data Seg:       32K                              -->
+<!-- LUN:            0                                -->
+<!-- DataSN:         0                                -->
+<!-- Offset:         0K                              -->
+<!-- FINAL?:         NO                              -->
+<!-- Function:       Data-Out, LUN 0, 32K, offset 0K (1st Data out)  -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>05000000</DWORD1>       <!-- operation code   (f=0)          -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>08000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>$ITT</ITT>             <!-- initiator task tag              -->
+        <DW20>$TTT</DW20>               <!-- target transfer tag or ffffffff -->
+        <DW24>00000000</DW24>           <!-- reserved                        -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- ExpStatSN                       -->
+        <DW32>00000000</DW32>           <!-- reserved                        -->
+        <DW36>00000000</DW36>           <!-- DataSN                          -->
+        <DW40>00000000</DW40>           <!-- Buffer offset                   -->
+        <DW44>00000000</DW44>           <!-- reserved                        -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="8000">
+        <FILE>Binaries\Data32K_1.bin</FILE>
+    </DATA>
+    <DATADIGEST />
+</ISCSIPDU>

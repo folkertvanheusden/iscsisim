@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTextReqMaxRecvLenNopad.xml     -->
+<!-- Command:        0x04 - Text Request               -->
+<!-- Tfer Size:      0x30                              -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Send a text request               -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>04800000</DWORD1> <!-- Final bit set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>30</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>   <!-- Appropriate value when C bit is set  -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="30"> 
+	   <FILE>Binaries\treqmaxrecvlen_nopad.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

@@ -1,0 +1,118 @@
+Test Case file descriptions:
+
+PDUs:
+
+DATA IN:
+
+PDUDataIn128K.xml :
+PDUDataIn512B.xml :
+PDUDataIn64K.xml :
+One-part full response to a 128K, 512, or 64K Read command.
+
+PDUDataIn32K_I.xml :
+PDUDataIn32K_F.xml :
+If the host has somehow negotiated the Maximum receiveable segment length to 32K (ie. by using PDULogin2_32K.xml during login or using text negotiation) and does a read of greater than 32K, these represent, respectively, an intermediate (or initial) and final 32K long Data IN response.
+
+Example: a 128K read with 32K MaxRecvDataSegmentLen would respond with 3x PDUDataIn32K_I followed by 1 PDUDataIn32K_F.
+
+PDUDataIn64KGeneric.xml : A 64K read response that is blind to its data structure, as long as there's 64K of data attached.
+
+DATA OUT :
+
+PDUDataOut21K.xml :
+PDUDataOut21K_2.xml :
+PDUDataOut22K.xml :
+A three-PDU ordered write in response to a 64K R2T in which 64K has already been transferred (ie. a SCSI WRITE command with 64K of immediate data).
+
+PDUDataOut64K.xml : A one-shot 64K write with the background situation above.
+
+LOGIN/OUT:
+
+PDULogin1.xml  :
+PDULogin1rsp.xml :
+PDULogin2.xml  :
+PDULogin2rsp.xml:
+Taken as a whole these 4 PDU's will get the bridge into full feature phase.
+
+PDULogoutSession.xml :
+PDULogoutConnection.xml :
+PDULogoutRspOK.xml :
+The first two will log a session or connection out of the device, and will generate the RspOK.
+
+PDULogoutConnRecovery.xml :
+Will attempt to logout a connection using ERL 2 Recovery, and should generate the RspOK.
+
+PDULogoutRspNoConnRec.xml :
+If PDULogoutConnRecovery is attempted with a connection ERL less than 2, this response will be returned.
+
+PDULogoutBadAhs.xml:
+PDULogoutBadDataLen:
+These PDUs have erroneous fields, and should receive reject responses.
+
+PDULogoutBadCID.xml :
+PDULogoutRspBadCID.xml :
+A logout request with the wrong CID, and its response.
+
+PDULogoutRspCleanFailed.xml :
+Will be the response to a logout that failed to clean up the connection.
+
+
+NOP:
+
+PDUNopOut.xml :
+PDUNopIn.xml :
+A properly-formed NOP-Out "ping" and its response.
+
+PDUNopOutPingData.xml :
+PDUNopInPingData.xml :
+The above with attached "ping" data.
+
+PDUNopOutBadITT.xml :
+PDUNopOutBadTTT.xml :
+NOP-Outs with an erroneous ITT or TTT.  They should receive reject responses.
+
+R2Ts:
+
+PDUR2T128K.xml :
+PDUR2T64K.xml :
+R2Ts requesting 128K and 64K writes respectively.
+
+SCSI COMMAND:
+
+PDUTestUnitReady.xml : Check's if a unit is ready to transfer data.  If PDUScsiStatusGood is
+received as a response, you're good to go.
+
+SCSI_READ:
+
+PDUScsiRead128K.xml :
+PDUScsiRead512B.xml :
+PDUScsiRead64K.xml :
+PDUTestRead.xml :
+Command to read 128K, 512, 64K, and 8K bytes respectively from LUN 0. No immediate data.
+
+SCSI RESPONSE:
+
+PDUScsiStatusGood.xml : Reports STATUS_GOOD.
+
+BINARIES:
+
+login1_ipb2600100029.bin  : LEN = 9C  Data for the first login request on a 
+bridge named ipb2600100029, with a default target mapped.  Login is for a normal 
+session with no authentication.
+
+login1rsp.bin : LEN = 28  Data for login response corresponding 
+with ipb2600100029.bin
+
+login2.bin : LEN = 12C Data to negotiate parameters -	includes the following
+	- Immediate data on
+	- Max Recvdatasegment length 64k
+	- Max Burst Length 256K
+	- First Burst Length 64K
+
+login2rsp.bin : LEN = 120  Data for login response corresponding with login2.bin
+
+login2_32K.bin : LEN = 12C Identical to login2.bin except the Max Recvdatasegment 
+length is 32k.
+
+
+	

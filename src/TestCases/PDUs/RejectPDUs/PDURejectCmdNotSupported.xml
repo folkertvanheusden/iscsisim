@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDURejectCmdNotSupported.xml                      -->
+<!-- Command:        0x3f - Reject                     -->
+<!-- Tfer Size:  BHS size                              -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Reject- Protocol Error     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>3f800500</DWORD1> <!-- 3rd byte contains reason code -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>$X</DATASEGLEN> <!-- Size of a BHS  -->
+		<LUN>$X</LUN>	
+		<ITT>FFFFFFFF</ITT> <!-- Required for Reject PDU -->
+		<DW20>$X</DW20>        
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>$X</DW40>
+		<DW44>$X</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+    <DATA len="30"  compare = "False">
+        <FILE>Binaries\Data4k.bin</FILE>
+    </DATA>
+	<DATADIGEST />
+</ISCSIPDU>
+

@@ -1,0 +1,28 @@
+<!-- Filename:       PDUScsiStatusGood.xml            -->
+<!-- Command:        0x21 - SCSI Response             -->
+<!-- Tfer Size:      0                                -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Report all quiet on the western front -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>21800000</DWORD1>       <!-- | | |response|status|           -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>00</DATASEGLEN>     <!-- data segment length             -->
+        <LUN>$X</LUN>                   <!-- reserved                        -->
+        <ITT>$ITT</ITT>                 <!-- initiator task tag              -->
+        <DW20>$X</DW20>                 <!-- SNACK tag or reserved           -->
+        <DW24>$X</DW24>                 <!-- StatSN                          -->
+        <DW28>$X</DW28>                 <!-- ExpCmdSN                        -->
+        <DW32>$X</DW32>                 <!-- MaxCmdSN                        -->
+        <DW36>$X</DW36>                 <!-- ExpDataSN or Reserved           -->
+        <DW40>$X</DW40>                 <!-- Bidirectional residual read count or reserved -->
+        <DW44>$X</DW44>                 <!-- Residual count or reserved      -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA />
+    <DATADIGEST />
+</ISCSIPDU>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC  
+                  TX: Text Request (16K Partials, 4K SGSize)
+                  RX: Text Response- OK
+                  TX: SCSI WRITE command (64K, 32K immediate)
+                  RX: R2T- 32K
+                  TX: Data Out (11K) (Out of order)
+                  TX: Data Out (14K) (Out of order) (4K overlap over PDU 1)
+                  TX: Data Out (11K) (Out of order)
+                  Rx: Write Status- Good
+     /DOC
+-->
+<ISCSITD>
+    <CmdSeqList>
+    <CmdSeq Id = "1">
+        <PDU i="1">PDUs\TextPDUs\PDUTReqP16SG4.xml</PDU>
+        <PDU i="2">PDUs\TextPDUs\PDUTRspBlank.xml</PDU>
+    </CmdSeq>
+    <CmdSeq Id = "2">
+        <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWrite64K_32KI.xml</PDU>
+        <PDU i="2">PDUs\R2Ts\PDUR2T32K_64K.xml</PDU>
+        <PDU i="3">PDUs\DataOutPDUs\PDUDataOutOOO_1.xml</PDU>
+        <PDU i="4">PDUs\DataOutPDUs\PDUDataOutOOOPO_2.xml</PDU>
+        <PDU i="5">PDUs\DataOutPDUs\PDUDataOutOOO_3.xml</PDU>
+        <PDU i="6">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+    </CmdSeq>
+    </CmdSeqList>
+    <RunList>
+        <R>(1,1)</R>
+        <R Trig="(1,2)">(2,1)</R>
+        <R Trig="(2,2)">(2,3)</R>
+        <R>(2,4)</R>
+        <R>(2,5)</R>
+        <R Trig="(2,6)"/>
+    </RunList>
+</ISCSITD>

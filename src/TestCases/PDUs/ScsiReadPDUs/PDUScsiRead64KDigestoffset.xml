@@ -1,0 +1,28 @@
+<!-- Filename:       PDUScsiRead64K.xml                 -->
+<!-- Command:        0x01 - SCSI Command                -->
+<!-- Tfer Size:      64K                                -->
+<!-- Immediate data: No                                 -->
+<!-- Function:       Read 64K from LUN 0                -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>01410000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0000000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>$EXP_STAT_SN</ITT>         <!-- initiator task tag              -->
+        <DW20>010000</DW20>             <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>28000000</DW32>           <!-- command descriptor block start  -->
+        <DW36>10000000</DW36>           <!-- LBA 10000 -->
+        <DW40>80000000</DW40>           <!-- read 0x80 blocks (64K)          -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST>$DIGEST</HEADERDIGEST>
+    <DATA />
+    <DATADIGEST>$DIGEST</DATADIGEST>
+</ISCSIPDU>

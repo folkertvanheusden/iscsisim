@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test Suite - Post-Inspection -->
+<!-- This is a test suite  File. It contains a series of tests, intended
+      to be run over and over.   Test cases will be run in the order that
+      they appear in this file. 
+        Test suite files have a ITS prefix by convention, and 
+        describe a set of iscsi test cases.  Test suite files 
+        are the top file in the test framework.  
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- Post-Inspection- Test permutations of the following:
+          -SCSI Commands
+              ~SCSI Responses
+              ~Data-Ins
+          -Login (Requests and Responses)
+          -Logout (Requests and Responses)
+          -Text (Requests and Responses)
+          -NOPs (Out and In)
+          -Rejects that serve as the responses for many of these permutations
+              -->
+<ISCSITS iterations="1">
+  <!-- LOGIN TESTS -->
+   <FILENAME>ITDLoginPrePDU.xml</FILENAME>   
+   <FILENAME>ITDLoginTooBig.xml</FILENAME>  <!-- Contains 2 tests -->
+   <FILENAME>ITDDoubleLogin.xml</FILENAME>
+   <FILENAME>ITDLoginSecToFF.xml</FILENAME>
+   <FILENAME>ITDLoginBadCSGNSG.xml</FILENAME>
+   <FILENAME>ITDLoginSameState.xml</FILENAME>
+   <FILENAME>ITDLoginBadCSGNoT.xml</FILENAME>
+   <FILENAME>ITDLoginBadVersion.xml</FILENAME>
+   <FILENAME>ITDLoginContinueBadVersion.xml</FILENAME>
+   <FILENAME>ITDLoginContinueNonLogin.xml</FILENAME> 
+   <FILENAME>ITDLoginContinueTooMuchData.xml</FILENAME>   
+   <FILENAME>ITDLogin3Continue.xml</FILENAME>     <!-- Good case  -->
+   <FILENAME>ITDLoginNoNull.xml</FILENAME>   
+   
+  <!-- LOGOUT TESTS -->
+   <FILENAME>ITDVanillaLogout.xml</FILENAME>
+   <FILENAME>ITDConnLogout.xml</FILENAME>
+   <FILENAME>ITDRecoveryLogout.xml</FILENAME>
+   <FILENAME>ITDLogoutBadAhs.xml</FILENAME> <!-- Also tests: Reject -->
+   <FILENAME>ITDLogoutBadCID.xml</FILENAME>
+   <FILENAME>ITDLogoutBadDataLen.xml</FILENAME> <!-- Also tests: Reject -->
+   <FILENAME>ITDLogoutNoConnRecovery.xml</FILENAME> <!-- Also tests: Text Req/Rsp -->
+   <FILENAME>ITDLogoutDiscoverRecover.xml</FILENAME> <!-- Also tests: Discovery session login -->
+   <FILENAME>ITDSesLogoutInWrite.xml</FILENAME> <!-- Also tests: SCSI Write/R2T -->
+   <FILENAME>ITDSesLogoutInWriteRecovery.xml</FILENAME> <!-- Also tests: SCSI Write/R2T -->
+      
+
+   <!-- NOP TESTS -->
+   <FILENAME>ITDLogin.xml</FILENAME>
+   <FILENAME>ITDVanillaNop.xml</FILENAME>
+   <FILENAME>ITDNopPing.xml</FILENAME>
+   <FILENAME>ITDNopBadITT.xml</FILENAME>
+   <FILENAME>ITDNopBadTTT.xml</FILENAME>
+   <FILENAME>ITDNopInWrite.xml</FILENAME> <!-- Also tests: SCSI Write/R2T -->
+   <FILENAME>ITDLogout.xml</FILENAME>
+   
+</ISCSITS>

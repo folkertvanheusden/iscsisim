@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUNopOutPingData.xml                      -->
+<!-- Command:        0x00 - NOP-Out                     -->
+<!-- Tfer Size: 512B                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Send a NOP-Out with 512 bytes of ping data attached     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>40800000</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>200</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>        <!-- = 0xffffffff     -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+    <DATA len="200" >
+      <FILE>Binaries\Data512B.bin</FILE>
+    </DATA>
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

@@ -1,0 +1,33 @@
+<!-- Filename:       PDUDataOut21K_2.xml              -->
+<!-- Command:        0x05 - SCSI Data-Out             -->
+<!-- Data Seg:       21K                              -->
+<!-- LUN:            0                                -->
+<!-- DataSN:         1                                -->
+<!-- Offset:         85K                              -->
+<!-- FINAL?:         NO                               -->
+<!-- Function:       Data-Out, LUN 0, 21K             -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>05000000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>005400</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>00000001</ITT>             <!-- initiator task tag              -->
+        <DW20>$TTT</DW20>               <!-- target transfer tag or ffffffff -->
+        <DW24>00000000</DW24>           <!-- reserved                        -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- ExpStatSN                       -->
+        <DW32>00000000</DW32>           <!-- reserved                        -->
+        <DW36>00000001</DW36>           <!-- DataSN                          -->
+        <DW40>00015400</DW40>           <!-- Buffer offset                   -->
+        <DW44>00000000</DW44>           <!-- reserved                        -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="5400">
+        <FILE>Binaries\DataBig.bin</FILE>
+    </DATA>
+    <DATADIGEST />
+</ISCSIPDU>

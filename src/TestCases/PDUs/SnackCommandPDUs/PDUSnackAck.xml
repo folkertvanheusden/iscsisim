@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUSnackAck.xml                  -->
+<!-- Command:        0x10 - SNACK request             -->
+<!-- Tfer Size:      0                                -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Issue SNACK ACK -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>10820000</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>00</DATASEGLEN>
+		<LUN>0000000100000000</LUN>
+		<ITT>$ITT</ITT>           <!-- ITT -->
+		<DW20>$TTT</DW20>         <!-- TTT/Snack Tag (TTT/LUN provided in DIN) -->
+		<DW24>00000000</DW24>     <!-- Reserved   -->
+		<DW28>$EXP_STAT_SN</DW28> <!-- ExpStatSN  -->
+		<DW32>00000000</DW32>	  <!-- Reserved   -->
+		<DW36>00000000</DW36>     <!-- Reserved   -->
+		<DW40>00000000</DW40>     <!-- Beg Run    -->
+		<DW44>00000000</DW44>     <!-- Run length -->
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>     
+	<DATA></DATA>
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

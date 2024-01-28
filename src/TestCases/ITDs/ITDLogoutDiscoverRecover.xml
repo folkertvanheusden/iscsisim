@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC                 
+             TX: Login Part 1- Discovery session type
+             RX: Login Response 1
+             TX: Login Part 2
+             RX: Login Response 2
+             TX: Logout request- with Connection recovery
+             RX: Logout Response- Connection recovery not supported
+     /DOC
+-->
+<!-- Session logout in the middle of a Write transfer -->
+<ISCSITD>
+   <INFILES>
+      <INPUT>  
+         <TRIGGER>$NONE</TRIGGER>
+         <FILENAME>PDUs\LoginPDUs\PDULogin1Discovery.xml</FILENAME>
+      </INPUT>
+      <INPUT>
+         <TRIGGER>0</TRIGGER>  <!-- wait for login1 to complete before sending -->
+         <FILENAME>PDUs\LoginPDUs\PDULogin2.xml</FILENAME>
+      </INPUT>
+      <INPUT>  
+         <TRIGGER>1</TRIGGER>
+         <FILENAME>PDUs\LogoutPDUs\PDULogoutConnRecovery.xml</FILENAME>
+      </INPUT>
+   </INFILES>
+   <OUTFILES>
+      <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
+         <FILENAME>PDUs\LoginPDUs\PDULogin1rsp.xml</FILENAME>
+      </OUTPUT> 
+      <OUTPUT Index = "1">
+         <FILENAME>PDUs\LoginPDUs\PDULogin2rsp.xml</FILENAME>
+      </OUTPUT>
+      <OUTPUT Index="2"> 
+         <FILENAME>PDUs\LogoutPDUs\PDULogoutRspNoConnRec.xml</FILENAME>
+      </OUTPUT> 
+   </OUTFILES>
+</ISCSITD>

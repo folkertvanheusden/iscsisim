@@ -1,0 +1,33 @@
+<!-- Filename:       PDUDataOut64K_BAU2.xml           -->
+<!-- Command:        0x05 - SCSI Data-Out             -->
+<!-- Data Seg:       64K                              -->
+<!-- LUN:            0                                -->
+<!-- DataSN:         0                                -->
+<!-- Offset:         0K                              -->
+<!-- FINAL?:         YES                             -->
+<!-- Function:       Data-Out, LUN 0, 64K, offset 64K (last Data out of 128k transfer)  -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>05800000</DWORD1>       <!-- operation code   (f=1)          -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>10000</DATASEGLEN>  <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>$ITT</ITT>             <!-- initiator task tag              -->
+        <DW20>$TTT</DW20>               <!-- target transfer tag or ffffffff -->
+        <DW24>00000000</DW24>           <!-- reserved                        -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- ExpStatSN                       -->
+        <DW32>00000000</DW32>           <!-- reserved                        -->
+        <DW36>00000002</DW36>           <!-- DataSN                          -->
+        <DW40>00010000</DW40>           <!-- Buffer offset                   -->
+        <DW44>00000000</DW44>           <!-- reserved                        -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="10000">
+        <FILE>Binaries\Data64K_2.bin</FILE>
+    </DATA>
+    <DATADIGEST />
+</ISCSIPDU>

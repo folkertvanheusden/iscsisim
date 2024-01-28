@@ -1,0 +1,30 @@
+<!-- Filename:       PDUTestWrite.xml                 -->
+<!-- Command:        0x01 - SCSI command              -->
+<!-- Tfer Size:                                       -->
+<!-- Immediate data: Yes                              -->
+<!-- Function:                                        -->
+
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>01A00000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>2000</DATASEGLEN>    <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>00000001</ITT>             <!-- initiator task tag              -->
+        <DW20>2000</DW20>                <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>2A000000</DW32>           <!-- command descriptor block start  -->
+        <DW36>02000000</DW36>
+        <DW40>10000000</DW40>
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="2000">                    <!-- data segment start              -->
+       <FILE>Binaries\Data64K.bin</FILE>  <!-- immediate data               -->
+    </DATA>                             <!-- data segment end                -->
+    <DATADIGEST />
+</ISCSIPDU>

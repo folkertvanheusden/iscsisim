@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Test Suite - Connection reinstate and reassign TM -->
+<!-- This is a test suite  File. It contains a series of tests, intended
+      to be run over and over.   Test cases will be run in the order that
+      they appear in this file. 
+        Test suite files have a ITS prefix by convention, and 
+        describe a set of iscsi test cases.  Test suite files 
+        are the top file in the test framework.  
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- Execute the login and out test suite  -->
+<ISCSITS iterations="1" initconn="idle">
+   <!-- We are now on an idle-bound connection -->
+   <FILENAME>ITDLoginIdle.xml</FILENAME>
+   <FILENAME>ITDInvalidTaskReassign.xml</FILENAME>
+   <FILENAME>ITDClearUnitAtt.xml</FILENAME> <!-- TUR should be done before attempting reads  -->
+   <FILENAME>ITDRead1MNoTreq.xml</FILENAME>
+   <FILENAME>ITDTaskNoAck.xml</FILENAME>
+   <FILENAME>ITDRead1MDrop.xml</FILENAME>
+   <FILENAME>ITDReadTaskReassignAlreadyAck.xml</FILENAME>
+   <FILENAME>ITDTaskReassign.xml</FILENAME>
+   <FILENAME>ITDReadTaskReassign.xml</FILENAME>
+   <FILENAME>ITDLogoutSetProxy.xml</FILENAME>
+   <!-- We are now on the Proxy connection -->
+</ISCSITS>

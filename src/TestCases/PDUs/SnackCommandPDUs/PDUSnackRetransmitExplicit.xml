@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUSnackResegmentBadITT.xml             -->
+<!-- Command:        0x10 - SNACK request             -->
+<!-- Tfer Size:      0                                -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Issue resegmentation SNACK request -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>10800000</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>00</DATASEGLEN>
+		<LUN>0000000100000000</LUN>
+		<ITT>8ffff</ITT>           <!-- ITT -->
+		<DW20>50</DW20>         <!-- TTT/Snack Tag -->
+		<DW24>00000000</DW24>     <!-- Reserved   -->
+		<DW28>00000000</DW28> <!-- ExpStatSN  -->
+		<DW32>00000000</DW32>	  <!-- Reserved   -->
+		<DW36>00000000</DW36>     <!-- Reserved   -->
+		<DW40>0</DW40>     <!-- Beg Run    -->
+		<DW44>1</DW44>     <!-- Run length -->
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>     
+	<DATA></DATA>
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

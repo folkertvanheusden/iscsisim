@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PduAbortTaskSet.xml                      -->
+<!-- Command:        0x02 - Task Mgmt                     -->
+<!-- Tfer Size: 0                                 -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Issue task reassign for TUR task     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>02820000</DWORD1> <!-- code 2 is abort task set  -->
+		<AHSLEN>00</AHSLEN>   <!-- Must be 0 for logout response  -->
+		<DATASEGLEN>00</DATASEGLEN> <!-- Must be 0 for logout response  -->
+		<LUN>0001000000000000</LUN>	
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>  <!-- Unused for abort task set -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>00</DW32>
+		<DW36>00</DW36>
+		<DW40>00</DW40>
+		<DW44>00</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA></DATA>    
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

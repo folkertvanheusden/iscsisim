@@ -1,0 +1,30 @@
+﻿<!-- Filename:       PDUDataIn512K_F.xml                -->
+<!-- Command:        0x25 - SCSI Data In              -->
+<!-- Tfer Size:      512K                             -->
+<!-- Immediate data: No                               -->
+<!-- Function:       First Response to PDUScsiRead512KNO with 256K partials     -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>25810000</DWORD1>       <!-- operation code- F and status bit set     -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>080000</DATASEGLEN> <!-- data segment length- 512K       -->
+        <LUN>0</LUN>                    <!-- logical unit number             -->
+        <ITT>$ITT</ITT>                 <!-- initiator task tag              -->
+        <DW20>$X</DW20>                 <!-- target transfer tag or ffffffff -->
+        <DW24>$X</DW24>                 <!-- StatSN or reserved              -->
+        <DW28>$X</DW28>                 <!-- ExpCmdSN                        -->
+        <DW32>$X</DW32>                 <!-- MaxCmdSN                        -->
+        <DW36>$X</DW36>                 <!-- DataSN                          -->
+        <DW40>0</DW40>                 <!-- Buffer offset                   -->
+        <DW44>0</DW44>                  <!-- Residual count or reserved      -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="80000" compare = "True">
+        <FILE>Binaries\Data512K.bin</FILE>
+    </DATA>
+    <DATADIGEST />
+</ISCSIPDU>

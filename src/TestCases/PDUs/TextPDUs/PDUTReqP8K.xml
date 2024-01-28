@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTReqP8K.xml                      -->
+<!-- Command:        0x04 - Text Request                     -->
+<!-- Tfer Size: Bhs-Size + 1D                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Text Request to negotiate an 8K Partial size     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>44800000</DWORD1> <!-- Final bit set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>1D</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>   <!-- Appropriate value when F bit is set  -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="1E"> 
+	   <FILE>Binaries\treqp8k.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

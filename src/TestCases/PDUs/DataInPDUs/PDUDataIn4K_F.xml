@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUDataIn4K_F.xml          -->
+<!-- Command:        0x25 - SCSI Data In              -->
+<!-- Tfer Size:      4K                              -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Read and compare 4K   -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>25810000</DWORD1>       <!-- operation code - F bit, no A bit-->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>001000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0</LUN>                    <!-- logical unit number             -->
+        <ITT>$ITT</ITT>                 <!-- initiator task tag              -->
+        <DW20>$X</DW20>                 <!-- target transfer tag or ffffffff -->
+        <DW24>$X</DW24>                 <!-- StatSN or reserved              -->
+        <DW28>$X</DW28>                 <!-- ExpCmdSN                        -->
+        <DW32>$X</DW32>                 <!-- MaxCmdSN                        -->
+        <DW36>$X</DW36>                 <!-- DataSN                          -->
+        <DW40>0</DW40>                  <!-- Buffer offset                   -->
+        <DW44>0</DW44>                  <!-- Residual count or reserved      -->
+    </BHS>                              <!-- basic header segment end        -->
+    <HEADERDIGEST />
+    <DATA len="1000" compare = "True">
+        <FILE>Binaries\Data4K.bin</FILE>  
+    </DATA>
+    <DATADIGEST />
+</ISCSIPDU>

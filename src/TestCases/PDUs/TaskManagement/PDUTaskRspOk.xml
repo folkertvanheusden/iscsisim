@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTaskRspOk.xml                      -->
+<!-- Command:        0x22 - Task Mgmt Response               -->
+<!-- Tfer Size: 0                                 -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Task Mgmt Response     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>22800000</DWORD1> <!-- 3rd byte is response code  -->
+		<AHSLEN>00</AHSLEN>   <!-- Must be 0 for logout response  -->
+		<DATASEGLEN>00</DATASEGLEN> <!-- Must be 0 for logout response  -->
+		<LUN>00</LUN>	
+		<ITT>$ITT</ITT>
+		<DW20>00</DW20>
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>00</DW36>
+		<DW40>00</DW40>
+		<DW44>00</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA></DATA>    
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

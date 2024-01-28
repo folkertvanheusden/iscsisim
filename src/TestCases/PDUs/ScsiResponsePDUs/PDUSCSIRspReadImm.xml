@@ -1,0 +1,28 @@
+﻿<!-- Filename:       PDUScsiReadImm.xml            -->
+<!-- Command:        0x21 - SCSI Response             -->
+<!-- Tfer Size:      0                                -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Sent if an initiator sent unsolicited data with a read request -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>21800002</DWORD1>       <!-- check condition           -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>$X</DATASEGLEN>     <!-- data segment length             -->
+        <LUN>0000000100000000</LUN>                   <!-- reserved                        -->
+        <ITT>$ITT</ITT>                 <!-- initiator task tag              -->
+        <DW20>0</DW20>                 <!-- SNACK tag or reserved           -->
+        <DW24>$X</DW24>                 <!-- StatSN                          -->
+        <DW28>$X</DW28>                 <!-- ExpCmdSN                        -->
+        <DW32>$X</DW32>                 <!-- MaxCmdSN                        -->
+        <DW36>0</DW36>                 <!-- ExpDataSN or Reserved           -->
+        <DW40>0</DW40>                 <!-- Bidirectional residual read count or reserved -->
+        <DW44>0</DW44>                 <!-- Residual count or reserved      -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA>	</DATA>   
+    <DATADIGEST />
+</ISCSIPDU>

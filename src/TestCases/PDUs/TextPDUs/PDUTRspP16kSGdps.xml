@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTRspP16kSGdps.xml                      -->
+<!-- Command:        0x24 - Text Response                     -->
+<!-- Tfer Size: Bhs-Size + 1E                                 -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Text Response to negotiate a 16K Partial size with 8K SG Size     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>24800000</DWORD1> <!-- Final bit set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>1e</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>   <!-- Appropriate value when F bit is set  -->
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>$X</DW40>
+		<DW44>$X</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="1e"> 
+	   <FILE>Binaries\treqp16kSGdps.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

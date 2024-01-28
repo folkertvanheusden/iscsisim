@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDULoginVersionReject.xml               -->
+<!-- Command:        0x23 - Login Response              -->
+<!-- Tfer Size:      BHS_SIZE                      -->
+<!-- Immediate data: No                               -->
+<!-- Function:  Login Response- Reject- Unsupported version    -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>23000000</DWORD1> <!-- No T bit, C bit, or stages set -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>00</DATASEGLEN>
+		<LUN>4000013700000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>$ITT</ITT>
+		<DW20>0</DW20>
+		<DW24>$X</DW24> <!-- Invalid if reject  -->
+		<DW28>$X</DW28> <!-- Invalid if reject -->
+		<DW32>$X</DW32> <!-- Invalid if reject-->
+		<DW36>02050000</DW36> <!-- 1st byte = Status class, 2nd byte = status detail, others reserved  -->
+		<DW40>0</DW40>                <!-- 0205 = iSCSI version range not supported by target -->
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA/>    
+	<DATADIGEST />
+</ISCSIPDU>

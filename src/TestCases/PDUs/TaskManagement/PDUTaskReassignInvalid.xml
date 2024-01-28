@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTaskReassignInvalid.xml                      -->
+<!-- Command:        0x02 - Task Mgmt                     -->
+<!-- Tfer Size: 0                                 -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Issue task reassign for an invalid task     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>02880000</DWORD1> <!-- 3rd byte is response code  -->
+		<AHSLEN>00</AHSLEN>   <!-- Must be 0 for logout response  -->
+		<DATASEGLEN>00</DATASEGLEN> <!-- Must be 0 for logout response  -->
+		<LUN>00</LUN>	
+		<ITT>$ITT</ITT>
+		<DW20>15feeb1e</DW20>
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>00</DW32>
+		<DW36>00</DW36>
+		<DW40>00</DW40>
+		<DW44>00</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA></DATA>    
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

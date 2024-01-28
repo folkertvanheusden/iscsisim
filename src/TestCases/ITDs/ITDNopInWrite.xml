@@ -1,0 +1,60 @@
+﻿<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->  
+
+<!-- DOC     TX: SCSI WRITE command for 128K with 64K of immediate
+             RX: R2T
+             TX: Data-Out (64K)
+             RX: SCSI Status Good
+             TX: SCSI READ 128K
+             RX: Data-In (128K)
+     /DOC
+-->
+
+<ISCSITD>
+   <INFILES>
+      <INPUT>  
+         <TRIGGER>$NONE</TRIGGER>
+         <FILENAME>PDUs\ScsiWritePDUs\PDUScsiWrite128K_64K.xml</FILENAME>
+      </INPUT>
+      <INPUT>  
+         <TRIGGER>0</TRIGGER>
+         <FILENAME>PDUs\NopPDUs\PDUNopOut.xml</FILENAME>
+      </INPUT>
+      <INPUT>
+         <TRIGGER>1</TRIGGER>
+         <FILENAME>PDUs\DataOutPDUs\PDUDataOut64K.xml</FILENAME>
+      </INPUT>
+      <INPUT>
+         <TRIGGER>2</TRIGGER>
+         <FILENAME>PDUs\ScsiReadPDUs\PDUScsiRead128K.xml</FILENAME>
+      </INPUT>
+   </INFILES>
+   <OUTFILES>
+      <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
+         <FILENAME>PDUs\R2Ts\PDUR2T64K.xml</FILENAME>
+      </OUTPUT>
+      <OUTPUT Index="1"> 
+         <FILENAME>PDUs\NopPDUs\PDUNopIn.xml</FILENAME>
+      </OUTPUT> 
+      <OUTPUT Index = "2">
+         <FILENAME>PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</FILENAME>
+      </OUTPUT>
+      <OUTPUT Index = "3">
+         <FILENAME>PDUs\DataInPDUs\PDUDataIn128K.xml</FILENAME>
+      </OUTPUT> 
+   </OUTFILES>
+</ISCSITD>

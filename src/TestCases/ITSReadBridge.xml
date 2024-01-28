@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test Suite - Post-Inspection -->
+<!-- This is a test suite  File. It contains a series of tests, intended
+      to be run over and over.   Test cases will be run in the order that
+      they appear in this file. 
+        Test suite files have a ITS prefix by convention, and 
+        describe a set of iscsi test cases.  Test suite files 
+        are the top file in the test framework.  
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- Test SCSI Reads in bridge mode
+        All tests performed using iSCSI Virtual Device®      -->
+       
+<ISCSITS iterations="1">
+   <!-- SCSI READ TESTS -->
+   <FILENAME>ITDLogin.xml</FILENAME>  <!-- Must login first before beginning tests  -->
+   <FILENAME>ITDClearUnitAtt.xml</FILENAME> <!-- TUR should be done before attempting reads  -->
+   <FILENAME>ITDRead0.xml</FILENAME>
+   <FILENAME>ITDRead512B.xml</FILENAME>
+   <FILENAME>ITDRead1K.xml</FILENAME>
+<!--   <FILENAME>ITDRead1536B.xml</FILENAME> -->
+    <FILENAME>ITDRead64K.xml</FILENAME>  
+<!--   <FILENAME>ITDRead1M.xml</FILENAME> 
+   <FILENAME>ITDRead1M+.xml</FILENAME> 
+   <FILENAME>ITDRead1MImm.xml</FILENAME> We ignore burst lengths 
+   <FILENAME>ITDOutOfRangeLBA.xml</FILENAME>
+   <FILENAME>ITDReadBrgOverrun.xml</FILENAME>
+   <FILENAME>ITDReadBrgUnderrun.xml</FILENAME>
+   <FILENAME>ITDTestMultiRead.xml</FILENAME> -->
+   <FILENAME>ITDRestoreDefaults.xml</FILENAME>
+   <FILENAME>ITDLogout.xml</FILENAME>
+</ISCSITS>

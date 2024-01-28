@@ -1,0 +1,43 @@
+﻿<!--  Test description file for basic login. -->
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->  
+
+<!--   TX:  Login Request 1
+         RX: Login Response- OK
+         TX:  Login Request Part 2 with Bad Version Number
+         RX: Login Reject Response
+         -->
+<ISCSITD>
+   <INFILES>
+      <INPUT>  
+         <TRIGGER>$NONE</TRIGGER>
+         <FILENAME>PDUs\LoginPDUs\PDULogin1.xml</FILENAME>
+      </INPUT>
+      <INPUT>
+         <TRIGGER>0</TRIGGER>  <!-- wait for login1 to complete before sending -->
+         <FILENAME>PDUs\LoginPDUs\PDULoginBadVersion.xml</FILENAME>
+      </INPUT>
+   </INFILES>
+   <OUTFILES>
+      <OUTPUT Index = "0"> <!-- INDEXES START AT 0!!! -->
+         <FILENAME>PDUs\LoginPDUs\PDULogin1rsp.xml</FILENAME>
+      </OUTPUT> 
+      <OUTPUT Index = "1">
+         <FILENAME>PDUs\LoginPDUs\PDULoginVersionReject.xml</FILENAME>
+      </OUTPUT>
+   </OUTFILES>
+</ISCSITD>

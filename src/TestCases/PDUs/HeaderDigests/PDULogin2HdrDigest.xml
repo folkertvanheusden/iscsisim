@@ -1,0 +1,26 @@
+﻿<!-- This is the response from the first login.  -->  
+<!-- All values are HEX -->
+
+<!-- iSCSI login Command with  data -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>43870000</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>128</DATASEGLEN>
+		<LUN>4000013700000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>$ITT</ITT>
+		<DW20>00010000</DW20>
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="128"> 
+	   <FILE>Binaries\login2HdrDigest.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

@@ -1,0 +1,26 @@
+﻿<!-- This file sends the first of a two-step login .  -->  
+<!-- All values are HEX -->
+
+<!-- iSCSI login Command with  data -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>43810000</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>5a</DATASEGLEN>
+		<LUN tsih="current">4000013700000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>$ITT</ITT>
+		<DW20>00020000</DW20>
+		<DW24>$CMD_SN</DW24>
+		<DW28>6</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="5a" login="True"> 
+	   <FILE>Binaries\login1nosessiontype.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

@@ -1,0 +1,30 @@
+﻿<!-- Filename:       PDUDataIn60KOL_4.xml                -->
+<!-- Command:        0x25 - SCSI Data In              -->
+<!-- Tfer Size:      12K                             -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Fourth and final Response to PDUScsiRead60K with 16K partials     -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>25C10000</DWORD1>       <!-- operation code- no status bit set                 -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>003000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0</LUN>                    <!-- logical unit number             -->
+        <ITT>$ITT</ITT>                 <!-- initiator task tag              -->
+        <DW20>$X</DW20>                 <!-- target transfer tag or ffffffff -->
+        <DW24>$X</DW24>                 <!-- StatSN or reserved              -->
+        <DW28>$X</DW28>                 <!-- ExpCmdSN                        -->
+        <DW32>$X</DW32>                 <!-- MaxCmdSN                        -->
+        <DW36>$X</DW36>                 <!-- DataSN                          -->
+        <DW40>$X</DW40>                 <!-- Buffer offset                   -->
+        <DW44>0</DW44>                  <!-- Residual count or reserved      -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="3000" compare = "True">
+        <FILE>Binaries\read_16K_200_4.bin</FILE>
+    </DATA>
+    <DATADIGEST />
+</ISCSIPDU>

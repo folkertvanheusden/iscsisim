@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       RejectInvalidField.xml                      -->
+<!-- Command:        0x3f - Reject                     -->
+<!-- Tfer Size: Bhs-Size                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Send a NOP-Out with 512 bytes of ping data attached     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>3f800900</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>30</DATASEGLEN> <!-- Size of a BHS  -->
+		<LUN>0000000100000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>0xFFFFFFFF</ITT>
+		<DW20>$X</DW20>        
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>$X</DW40>
+		<DW44>$X</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+    <DATA len="30"  compare = "False"></DATA>
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>
+

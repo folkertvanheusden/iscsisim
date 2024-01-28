@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is the response from the second login.  -->
+<!-- All values are HEX -->
+<!-- iSCSI login Rsp with  data -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>23870000</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>121</DATASEGLEN>
+		<LUN>4000013700000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>1</ITT>
+		<DW20>0</DW20>
+		<DW24>00000001</DW24>
+		<DW28>00000001</DW28>
+		<DW32>$X</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA len="121"> 
+	   <FILE>Binaries\login2rspHdrDigest_32K.bin</FILE> 
+	</DATA>    
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

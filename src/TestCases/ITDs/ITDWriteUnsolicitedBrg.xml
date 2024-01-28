@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC  
+                  TX: Text Request (Bridge Mode)
+                  RX: Text Response- OK
+                  TX: SCSI WRITE command (64K, no F bit)
+                  TX: Unsolicited Data Out (32K)
+                  Rx: R2T- 32K
+                  TX: Data Out- 32 K
+                  Rx: Write Status- Good
+     /DOC
+-->
+<ISCSITD>
+    <CmdSeqList>
+    <CmdSeq Id = "1">
+        <PDU i="1">PDUs\TextPDUs\PDUTReqBrg.xml</PDU>
+        <PDU i="2">PDUs\TextPDUs\PDUTRspBrg.xml</PDU>
+    </CmdSeq>
+    <CmdSeq Id = "2">
+        <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWrite64K_NoF.xml</PDU>
+        <PDU i="2">PDUs\DataOutPDUs\PDUDataOut32K_U.xml</PDU>
+        <PDU i="3">PDUs\R2Ts\PDUR2T32K_64K.xml</PDU>
+        <PDU i="4">PDUs\DataOutPDUs\PDUDataOut32K_64K.xml</PDU>
+        <PDU i="5">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+    </CmdSeq>
+    </CmdSeqList>
+    <RunList>
+        <R>(1,1)</R>
+        <R Trig="(1,2)">(2,1)</R>
+        <R>(2,2)</R>
+        <R Trig="(2,3)">(2,4)</R>
+        <R Trig="(2,5)"/>
+    </RunList>
+</ISCSITD>

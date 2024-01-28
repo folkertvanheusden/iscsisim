@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC  
+                  TX: Text Request (Bridge Mode)
+                  RX: Text Response- OK
+                  TX: SCSI WRITE command (64K, 0 bytes Immediate)
+                  RX: R2T- 64K bytes
+                  TX: SCSI WRITE command (64K, 0 bytes Immediate)
+                  RX: R2T- 64K bytes
+                  TX: SCSI WRITE command (64K, 0 bytes Immediate)
+                  RX: R2T- 64K bytes
+                  TX: Data Out- 64K- Cmd 3
+                  RX: Write Status- Good
+                  TX: Data Out- 64K- Cmd 1
+                  RX: Write Status- Good
+                  TX: Data Out- 64K- Cmd 2
+                  RX: Write Status- Good
+     /DOC
+-->
+<ISCSITD>
+    <CmdSeqList>
+        <CmdSeq Id = "1">
+            <PDU i="1">PDUs\TextPDUs\PDUTReqBrg.xml</PDU>
+            <PDU i="2">PDUs\TextPDUs\PDUTRspBrg.xml</PDU>
+        </CmdSeq>
+        <CmdSeq Id = "2">
+            <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWriteFoo1.xml</PDU>
+            <PDU i="2">PDUs\R2Ts\PDUR2T64KTst.xml</PDU>
+            <PDU i="3">PDUs\DataOutPDUs\PDUDataOutFoo1.xml</PDU>
+            <PDU i="4">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+        </CmdSeq>
+        <CmdSeq Id = "3">
+            <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWriteFoo2.xml</PDU>
+            <PDU i="2">PDUs\R2Ts\PDUR2T64KTst.xml</PDU>
+            <PDU i="3">PDUs\DataOutPDUs\PDUDataOutFoo2.xml</PDU>
+            <PDU i="4">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+        </CmdSeq>
+        <CmdSeq Id = "4">
+            <PDU i="1">PDUs\ScsiWritePDUs\PDUScsiWriteFoo3.xml</PDU>
+            <PDU i="2">PDUs\R2Ts\PDUR2T64KTst.xml</PDU>
+            <PDU i="3">PDUs\DataOutPDUs\PDUDataOutFoo3.xml</PDU>
+            <PDU i="4">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+        </CmdSeq>
+    </CmdSeqList>
+    <RunList>
+        <R>(1,1)</R>
+        <R Trig="(1,2)">(2,1)</R>
+        <R Trig="(2,2)">(3,1)</R>
+        <R Trig="(3,2)">(4,1)</R>
+        <R Trig="(4,2)">(4,3)</R>
+        <R Trig="(4,4)">(2,3)</R>
+        <R Trig="(2,4)">(3,3)</R>
+        <R Trig="(3,4)"/>
+    </RunList>
+</ISCSITD>

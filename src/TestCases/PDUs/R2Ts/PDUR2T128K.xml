@@ -1,0 +1,28 @@
+<!-- Filename:       PDUR2T128K.xml                   -->
+<!-- Command:        0x31 - Ready To Transfer         -->
+<!-- Tfer Size:      128K                             -->
+<!-- Immediate data: X                                -->
+<!-- Function:       R2T host response to 128K write  -->
+
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>31800000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>$ITT</ITT>                 <!-- initiator task tag              -->
+        <DW20>$TTT</DW20>               <!-- target transfer tag             -->
+        <DW24>$X</DW24>                 <!-- StatSN                          -->
+        <DW28>$X</DW28>                 <!-- ExpCmdSN                        -->
+        <DW32>$X</DW32>                 <!-- R2TSN                           -->
+        <DW36>000000000</DW36>          <!-- MAXCMDSN Offset                 -->
+        <DW40>000000000</DW40>          <!-- Buffer Offset                   -->
+        <DW44>000020000</DW44>          <!-- Desired Data Transfer Length    -->         
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA />
+    <DATADIGEST />
+</ISCSIPDU>

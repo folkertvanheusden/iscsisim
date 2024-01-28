@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTextRspERL.xml                      -->
+<!-- Command:        0x24 - Text Response                     -->
+<!-- Tfer Size: Bhs-Size + 15                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Text Response negotiating the ERL down to 0     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>24800000</DWORD1> <!-- Final bit set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>15</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>   <!-- Appropriate value when F bit is set  -->
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>$X</DW40>
+		<DW44>$X</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="15" compare = "True"> 
+	   <FILE>Binaries\textreqERL.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

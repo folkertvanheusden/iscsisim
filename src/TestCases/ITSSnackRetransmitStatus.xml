@@ -1,0 +1,34 @@
+<!--  Test Suite - SNACK DataAck (Type 1) -->
+
+<!-- This is a test suite  File. It contains a series of tests, intended
+      to be run over and over.   Test cases will be run in the order that
+      they appear in this file. 
+        Test suite files have a ITS prefix by convention, and 
+        describe a set of iscsi test cases.  Test suite files 
+        are the top file in the test framework.  
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->  
+
+
+<!-- Execute the SNACK Data Acknowledgment test suite -->
+<ISCSITS iterations = "1">
+   <FILENAME>ITDLogin.xml</FILENAME>
+   <FILENAME>ITDClearUnitAtt.xml</FILENAME> <!-- TUR should be done before attempting reads  -->
+   <FILENAME>ITDSnackRead64kForRetransmit.xml</FILENAME> <!-- No StatSN Ack for this PDU or TUR -->
+   <FILENAME>ITDSnackRetransmitStatusBadStart.xml</FILENAME>
+   <FILENAME>ITDSnackRetransmitStatusBadRunLen.xml</FILENAME>
+   <FILENAME>ITDSnackRetransmitStatusBadStartRunLen.xml</FILENAME>
+   <FILENAME>ITDSnackRetransmitStatusExplicit.xml</FILENAME>
+   <FILENAME>ITDSnackRetransmitStatusLast.xml</FILENAME>
+   <FILENAME>ITDSnackRetransmitStatusFirst.xml</FILENAME>
+   <FILENAME>ITDSnackRetransmitStatusImplicit.xml</FILENAME>
+   <FILENAME>ITDLogout.xml</FILENAME>
+</ISCSITS>

@@ -1,0 +1,25 @@
+﻿<!-- Filename:       PDULoginStayInSec.xml                 -->
+<!-- Command:        0x23 - Login Request                -->
+<!-- Tfer Size:      BHS_SIZE                                -->
+<!-- Immediate data: No                                 -->
+<!-- Function:       Response to first PDU. Stay in Security Stage                -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>23000000</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>$X</DATASEGLEN>
+		<LUN>4000013700000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>$ITT</ITT>
+		<DW20>0</DW20>
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA />    
+	<DATADIGEST />
+</ISCSIPDU>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUScsiRspUnderflow.xml            -->
+<!-- Command:        0x21 - SCSI Response             -->
+<!-- Tfer Size: Don't care                                -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Returns status CHECK_CONDITION with 0x5400 byte (21K) underflow   -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>21820002</DWORD1> <!-- Residual underflow, check condition -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>$X</DATASEGLEN>
+		<LUN>0000000100000000</LUN>
+		<ITT>$ITT</ITT>
+		<DW20>00000000</DW20>
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>0</DW40>
+		<DW44>5400</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA></DATA>      
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

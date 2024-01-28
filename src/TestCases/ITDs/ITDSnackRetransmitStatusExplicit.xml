@@ -1,0 +1,41 @@
+﻿<!--  Test description file for basic login. -->
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+        This test reads data and sets the ExpStatSN to 0 in the process. It 
+        will then ask for retransmit of various sequences of PDUs, some valid
+        and some invalid. 
+
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->  
+
+<!--   
+         TX: Issue SNACK retransmit request with correct ITT and run info
+         RX: Retransmitted pdus (2)
+         -->
+<ISCSITD>
+   <CmdSeqList>
+   <CmdSeq Id="1">
+      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackResendStatusExplicit.xml</PDU>
+      <PDU i="2">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+      <PDU i="3">PDUs\DataInPDUs\PDUDataInTst64kNoCompare.xml</PDU>
+      <!-- We will see reject PDUs here too! -->
+   </CmdSeq>
+   </CmdSeqList>
+   <RunList>
+      <R>(1,1)</R>
+      <R Trig="(1,2)"/>
+      <R Trig="(1,3)"/>
+   </RunList>
+</ISCSITD>

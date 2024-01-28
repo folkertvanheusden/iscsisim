@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDULogoutSession.xml                      -->
+<!-- Command:        0x06 - Logout                     -->
+<!-- Tfer Size: Bhs-Size                                 -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Send a Logout- Session Close Request     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>46800000</DWORD1>   <!-- 2nd byte has reason code -->
+		<AHSLEN>00</AHSLEN> <!-- 0 for a logout request -->
+		<DATASEGLEN>00</DATASEGLEN> <!-- 0 for a logout request -->
+		<LUN>0</LUN>
+		<ITT>26</ITT>
+		<DW20>0</DW20>  <!-- CID- doesn't matter if session close -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>    
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA></DATA>    
+	<DATADIGEST>$DIGEST</DATADIGEST>
+</ISCSIPDU>

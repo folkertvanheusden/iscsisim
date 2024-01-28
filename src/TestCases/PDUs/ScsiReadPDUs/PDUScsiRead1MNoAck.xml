@@ -1,0 +1,28 @@
+﻿<!-- Filename:       PDUScsiRead1M.xml                 -->
+<!-- Command:        0x01 - SCSI Command                -->
+<!-- Tfer Size:      1M                                -->
+<!-- Immediate data: No                                 -->
+<!-- Function:       Read 1 MB from LUN 0                -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>41400000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>feefee</ITT>               <!-- initiator task tag              -->
+        <DW20>100000</DW20>             <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>6</DW28>       <!-- expected status sequence num    -->
+        <DW32>28000000</DW32>           <!-- command descriptor block start  -->
+        <DW36>02000008</DW36>           <!-- LBA = 200                      -->
+        <DW40>00000000</DW40>           <!-- read 0x800 blocks (1 MB)          -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA />
+    <DATADIGEST />
+</ISCSIPDU>

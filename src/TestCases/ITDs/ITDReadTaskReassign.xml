@@ -1,0 +1,33 @@
+﻿
+<!--  Test description file for a 1MB read task reassign. -->
+
+
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files 
+        are the middle file in the test framework. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [PDU 1]
+                        +:: [PDU n] 
+            +:: [Test Description n (ITD)]
+                        +:: [PDU 1]
+                        +:: [PDU n] 
+                        
+ -->  
+
+<!--   Send invalid task reassign TM request, receive response -->
+<ISCSITD>
+   <CmdSeqList>
+   <CmdSeq Id = "1">
+      <PDU i="1">PDUs\TaskManagement\PDUTaskReassign1MReadNoAck.xml</PDU>
+      <PDU i="2">PDUs\TaskManagement\PDUTaskRspOk.xml</PDU>
+   </CmdSeq>
+   </CmdSeqList>
+   <RunList>
+      <R>(1,1)</R>
+      <R Trig="(1,2)"/>
+   </RunList>
+</ISCSITD>

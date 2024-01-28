@@ -1,0 +1,23 @@
+﻿
+<!--  Test description file to TUR on lun 0. This task is not meant to be acked
+-->
+
+
+<!--  send TUR, wait for Unit Att twice, Send TUR, get status good. -->
+<ISCSITD>
+    <CmdSeqList>
+       <CmdSeq Id="1">
+          <PDU i="1">PDUs\ScsiCommandPDUs\PDUTestUnitReadyLbl.xml</PDU>
+          <PDU i="2">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+       </CmdSeq>
+    </CmdSeqList>
+
+    <RunList>
+       <R>(1,1)</R>
+       <R Trig="(1,2)"></R>
+    </RunList>
+</ISCSITD>
+
+
+
+				

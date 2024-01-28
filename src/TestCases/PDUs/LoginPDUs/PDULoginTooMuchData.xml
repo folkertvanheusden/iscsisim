@@ -1,0 +1,28 @@
+﻿<!-- Filename:       PDULoginTooMuchData.xml                 -->
+<!-- Command:        0x03 - Login Request                -->
+<!-- Tfer Size:      BHS_SIZE + 0x100400                                -->
+<!-- Immediate data: Yes                                 -->
+<!-- Function:       Continued Login request- has 1.01MB of data, which should overwhelm the target and
+                              produce a login reject response                -->
+  
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>43870000</DWORD1> <!-- Transit to FF stage -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>00100406</DATASEGLEN> <!-- default TMaxDataRecvLength is 1MB  -->
+		<LUN>4000013700000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>$ITT</ITT>
+		<DW20>00010000</DW20>
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA></DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

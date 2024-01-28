@@ -1,0 +1,28 @@
+﻿<!-- Filename:       PDUScsiRead128K_LBA500.xml         -->
+<!-- Command:        0x01 - SCSI Command                -->
+<!-- Tfer Size:      128K                               -->
+<!-- Immediate data: No                                 -->
+<!-- Function:       Read 128K from LUN 1               -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>41400000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>$CMD_SN</ITT>             <!-- initiator task tag              -->
+        <DW20>020000</DW20>             <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>28000000</DW32>           <!-- command descriptor block start  -->
+        <DW36>05000001</DW36>           <!-- LBA = 500 -->
+        <DW40>00000000</DW40>           <!-- read 0x100 blocks (128K)        -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA />
+    <DATADIGEST />
+</ISCSIPDU>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--  Test description file for login with make Data Receive length of
+      32K- for Multiple Read tests. -->
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!--   Text Negotiation to Restore default Residual and MaxRecvDataSegLen -->
+<ISCSITD>
+<CmdSeqList>
+    <CmdSeq Id="1">
+        <PDU i="1">PDUs\TextPDUs\PDUTextReqNormRecvDataLen.xml</PDU>
+        <PDU i="2">PDUs\TextPDUs\PDUTRspDontCare.xml</PDU>
+    </CmdSeq>
+</CmdSeqList>
+<RunList>
+    <R>(1,1)</R>
+    <R Trig="(1,2)"/>
+</RunList>
+</ISCSITD>

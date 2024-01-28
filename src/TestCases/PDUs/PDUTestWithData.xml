@@ -1,0 +1,27 @@
+<!-- This is a test PDU File 
+     It contains one PDU .  -->  
+<!-- All values are HEX -->
+
+<!-- iSCSI SCSI Command with no data -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>01C00000</DWORD1>
+		<AHSLEN>AA</AHSLEN>
+		<DATASEGLEN>fffd</DATASEGLEN>
+		<LUN>abcdef1122334455</LUN>
+		<ITT>faceface</ITT>
+		<DW20>fffd</DW20>
+		<DW24>12345678</DW24>
+		<DW28>23456789</DW28>
+		<DW32>3456789a</DW32>
+		<DW36>456789ab</DW36>
+		<DW40>56789abc</DW40>
+		<DW44>6789abcd</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="fffd"> 
+	   <FILE>Data64K.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

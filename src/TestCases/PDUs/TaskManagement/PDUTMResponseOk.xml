@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTMRspOk.xml                      -->
+<!-- Command:        0x22 - Task Mgmt  Response          -->
+<!-- Tfer Size: 0                                 -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Response to task mgmt command    -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>22800000</DWORD1> <!-- No function.  Response 0 = function complete  -->
+		<AHSLEN>00</AHSLEN>   <!-- Must be 0 for logout response  -->
+		<DATASEGLEN>00</DATASEGLEN> <!-- Must be 0 for logout response  -->
+		<LUN>$X</LUN>	
+		<ITT>$ITT</ITT>
+		<DW20>00</DW20> <!-- Reserved-->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>$X</DW32>
+		<DW36>00</DW36>
+		<DW40>00</DW40>
+		<DW44>00</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST></HEADERDIGEST>
+	<DATA></DATA>    
+	<DATADIGEST></DATADIGEST>
+</ISCSIPDU>

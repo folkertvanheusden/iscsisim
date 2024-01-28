@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUScsiUnitAttrsp.xml            -->
+<!-- Command:        0x21 - SCSI Response             -->
+<!-- Tfer Size:      0                                -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Returns status CHECK_CONDITION   -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>21800002</DWORD1>
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>$X</DATASEGLEN>
+		<LUN>0000000000000000</LUN>
+		<ITT>$ITT</ITT>
+		<DW20>00000000</DW20>
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST>$DIGEST</HEADERDIGEST>
+	<DATA len = "22">
+	    <FILE>Binaries\UnitAttChkCond.bin</FILE>
+	</DATA>      
+	<DATADIGEST>$DIGEST</DATADIGEST>
+</ISCSIPDU>

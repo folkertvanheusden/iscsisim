@@ -1,0 +1,33 @@
+<!-- Filename:       PDUDataOut1M_4.xml                -->
+<!-- Command:        0x05 - SCSI Data-Out             -->
+<!-- Data Seg:       256KB                              -->
+<!-- LUN:            0                                -->
+<!-- DataSN:         0                                -->
+<!-- Offset:         0xC0000                             -->
+<!-- FINAL?:         YES                              -->
+<!-- Function:       Data-Out, LUN 0, 256K             -->
+  
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>05800000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>040000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>$ITT</ITT>                 <!-- initiator task tag              -->
+        <DW20>$TTT</DW20>               <!-- target transfer tag or ffffffff -->
+        <DW24>00000000</DW24>           <!-- reserved                        -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- ExpStatSN                       -->
+        <DW32>00000000</DW32>           <!-- reserved                        -->
+        <DW36>00000000</DW36>           <!-- DataSN                          -->
+        <DW40>000C0000</DW40>           <!-- Buffer offset                   -->
+        <DW44>00000000</DW44>           <!-- reserved                        -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="40000">
+        <FILE>Binaries\write_1M_4.bin</FILE>
+    </DATA>
+    <DATADIGEST />
+</ISCSIPDU>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTReqBrgUndrrun.xml                      -->
+<!-- Command:        0x04 - Text Request                     -->
+<!-- Tfer Size: Bhs-Size + 36                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Text Request to negotiate a Partial size of 0- bridge mode with 1K residual underrun     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>44800000</DWORD1> <!-- Final bit set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>2C</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$CMD_SN</ITT>
+		<DW20>ffffffff</DW20>   <!-- Appropriate value when F bit is set  -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="2C"> 
+	   <FILE>Binaries\treqbrgundrrun.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

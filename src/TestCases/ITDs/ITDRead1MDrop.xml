@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- DOC  
+                  TX: SCSI READ command (1 MB read)
+                  Rx: Data In (1 MB)
+                  Connection changed to DUT
+                  TX: Login with connection reinstate
+                  RX: Login response
+                  TX: Login with connection reinstate/ff
+                  RX: Login response
+     /DOC
+-->
+<ISCSITD>
+<CmdSeqList>
+    <CmdSeq Id="1">
+        <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead1MNoAck.xml</PDU>
+        <PDU i="2">PDUs\DataInPDUs\PDUDataIn1M.xml</PDU>
+    </CmdSeq>
+   <CmdSeq Id = "2">
+      <PDU i="1">PDUs\LoginPDUs\PDULogin1Reinstate.xml</PDU>
+      <PDU i="2">PDUs\LoginPDUs\PDULogin1rsp.xml</PDU>
+   </CmdSeq>
+   <CmdSeq Id = "3">
+      <PDU i="1">PDUs\LoginPDUs\PDULogin2Reinstate.xml</PDU>
+      <PDU i="2">PDUs\LoginPDUs\PDULogin2Reinstatersp.xml</PDU>
+   </CmdSeq>
+</CmdSeqList>
+<RunList>
+<!--
+    <R>(1,1)</R>
+    <R Trig="(1,2)" Connection="New" Target="DUT">(2,1)</R>
+    <R Trig="(2,2)"/> 
+    -->
+    <R>(1,1)</R>
+    <R Trig="(1,2)" Connection="New" Target="DUT">(2,1)</R>
+    <R Trig="(2,2)">(3,1)</R>
+    <R Trig="(3,2)"/>
+</RunList>
+</ISCSITD>

@@ -1,0 +1,30 @@
+<!-- Filename:       PDUScsiWrite64K.xml              -->
+<!-- Command:        0x01 - SCSI command              -->
+<!-- Tfer Size:      64K                              -->
+<!-- Immediate data: Yes, 64K                         -->
+<!-- Function:       Write 64K to LUN 0               -->
+
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>01A10000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>010000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>$EXP_STAT_SN</ITT>         <!-- initiator task tag              -->
+        <DW20>00001000</DW20>           <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>2A000000</DW32>           <!-- command descriptor block start  -->
+        <DW36>02000000</DW36>           <!-- LBA = 512                       -->
+        <DW40>80000000</DW40>           <!-- write 0x80 blocks (64K)         -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="1000">                    <!-- data segment start              -->
+       <FILE>Binaries\Data4K.bin</FILE>  <!-- immediate data               -->
+    </DATA>                             <!-- data segment end                -->
+    <DATADIGEST />
+</ISCSIPDU>

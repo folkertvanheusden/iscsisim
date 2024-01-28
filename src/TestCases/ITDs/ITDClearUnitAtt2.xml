@@ -1,0 +1,26 @@
+﻿
+<!--  Test description file to clear unit attentions on lun 0. -->
+
+
+<!--  send TUR, wait for Unit Att twice, Send TUR, get status good. -->
+<ISCSITD>
+    <CmdSeqList>
+       <CmdSeq Id="1">
+          <PDU i="1">PDUs\ScsiCommandPDUs\PDUTestUnitReady.xml</PDU>
+          <PDU i="2">PDUs\ScsiResponsePDUs\PDUScsiUnitAttrsp.xml</PDU>
+       </CmdSeq>
+       <CmdSeq Id="2">
+          <PDU i="1">PDUs\ScsiCommandPDUs\PDUTestUnitReady.xml</PDU>
+          <PDU i="2">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+       </CmdSeq>
+    </CmdSeqList>
+
+    <RunList>
+       <R>(1,1)</R>
+       <R Trig="(1,2)">(2,1)</R>
+       <R Trig="(2,2)"/>
+    </RunList>
+</ISCSITD>
+
+
+				

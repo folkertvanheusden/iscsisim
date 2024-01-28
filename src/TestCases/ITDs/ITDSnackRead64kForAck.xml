@@ -1,0 +1,45 @@
+﻿<!--  Test description file for basic login. -->
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->  
+
+<!--   
+         TX: 64k read
+         RX: Data In
+         RX: Data In
+         TX: Issue SNACK ACK request for Data in
+         TX: Logout request
+         RX: Logout response
+         -->
+<ISCSITD>
+   <CmdSeqList>
+   <CmdSeq Id="1">
+      <PDU i="1">PDUs\ScsiReadPDUs\PDUScsiRead64K.xml</PDU>
+      <PDU i="2">PDUs\DataInPDUs\PDUDataInTst64KNoCompare.xml</PDU>
+   </CmdSeq>
+   <CmdSeq Id="2">
+      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackAck.xml</PDU>
+      <PDU i="2">PDUs\ScsiCommandPDUs\PDUTestUnitReady.xml</PDU>
+      <PDU i="3">PDUs\ScsiResponsePDUs\PDUScsiStatusGood.xml</PDU>
+   </CmdSeq>
+   </CmdSeqList>
+   <RunList>
+      <R>(1,1)</R>
+      <R Trig="(1,2)">(2,1)</R>
+      <R>(2,2)</R>
+      <R Trig="(2,3)"/>
+   </RunList>
+</ISCSITD>

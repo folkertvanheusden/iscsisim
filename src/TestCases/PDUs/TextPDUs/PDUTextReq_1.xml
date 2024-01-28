@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTextReq_1.xml                      -->
+<!-- Command:        0x04 - Text Request                     -->
+<!-- Tfer Size: Bhs-Size + 0x3c                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       First part of a three-part text request     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>44400000</DWORD1> <!-- Continue bit set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>3C</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$ITT</ITT>
+		<DW20>$TTT</DW20>   <!-- Appropriate value when C bit is set  -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="3C"> 
+	   <FILE>Binaries\splittext_1.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

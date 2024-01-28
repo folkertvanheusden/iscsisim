@@ -1,0 +1,48 @@
+﻿<!--  Test description file for basic login. -->
+<!-- This is a test test description File. It contains one test .  
+        Test description files have a ITD prefix by convention, and 
+        describe a single iscsi test case.  Test description files can
+        are the middle file in the test framework. Each test case will most 
+        likely begin with a login and end with a logout. Each test description
+        can be executed multiple times as part of a test suite:
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->  
+
+<!--   
+         TX: Snack retransmit request with bad start
+         RX: Protocol error
+         TX: Snack retransmit request with good start but bad run len
+         RX: Protocol error
+         TX: Snack retransmit request with bad start and bad run len
+         RX: Protocol error
+         -->
+<ISCSITD>
+   <CmdSeqList>
+   <CmdSeq Id = "1">
+      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackRetransmitBadStart.xml</PDU>
+      <PDU i="2">PDUs\RejectPDUs\PDURejectProtocol.xml</PDU>>
+   </CmdSeq>
+   <CmdSeq Id = "2">
+      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackRetransmitBadRunLen.xml</PDU>
+      <PDU i="2">PDUs\RejectPDUs\PDURejectProtocol.xml</PDU>>
+   </CmdSeq>
+   <CmdSeq Id = "3">
+      <PDU i="1">PDUs\SnackCommandPDUs\PDUSnackRetransmitBadStartRunLen.xml</PDU>
+      <PDU i="2">PDUs\RejectPDUs\PDURejectProtocol.xml</PDU>>
+   </CmdSeq>
+   </CmdSeqList>
+   <RunList>
+      <R>(1,1)</R>
+      <R Trig="(1,2)">(2,1)</R>
+      <R Trig="(2,2)">(3,1)</R>
+      <R Trig="(3,2)"/>
+   </RunList>
+</ISCSITD>

@@ -1,0 +1,30 @@
+<!-- Filename:       PDUScsiWrite512B.xml             -->
+<!-- Command:        0x01 - SCSI command              -->
+<!-- Tfer Size:      512B                             -->
+<!-- Immediate data: Yes, 512B                        -->
+<!-- Function:       Write 512 bytes to LUN 0         -->
+
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>01A00000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>200</DATASEGLEN>    <!-- data segment length             -->
+        <LUN>0000000100000000</LUN>     <!-- logical unit number             -->
+        <ITT>00021741</ITT>             <!-- initiator task tag              -->
+        <DW20>200</DW20>                <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>2A000000</DW32>           <!-- command descriptor block start  -->
+        <DW36>02000000</DW36>           <!-- LBA=512                         -->
+        <DW40>01000000</DW40>           <!-- Read 1 block (512B)             -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA len="200">                    <!-- data segment start              -->
+    <FILE>Binaries\read_16K_200_1.bin</FILE>  <!-- immediate data            -->
+    </DATA>                             <!-- data segment end                -->
+    <DATADIGEST>$DIGEST</DATADIGEST>
+</ISCSIPDU>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTextReqBadFC.xml                      -->
+<!-- Command:        0x04 - Text Request                     -->
+<!-- Tfer Size: Bhs-Size + 15                                 -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:       Text Request with both F and C bits set- error     -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>44C00000</DWORD1> <!-- Final and continue bits set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>15</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>   <!-- Appropriate value when F bit is set  -->
+		<DW24>$CMD_SN</DW24>
+		<DW28>$EXP_STAT_SN</DW28>
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="16"> 
+	   <FILE>Binaries\textreqERL.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

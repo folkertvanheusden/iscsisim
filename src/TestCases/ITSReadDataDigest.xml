@@ -1,0 +1,28 @@
+<!--  Test Suite - Performs multiple write and read command sequences -->
+
+<!-- This is a test suite  File. It contains a series of tests, intended
+      to be run over and over.   Test cases will be run in the order that
+      they appear in this file. 
+        Test suite files have a ITS prefix by convention, and 
+        describe a set of iscsi test cases.  Test suite files 
+        are the top file in the test framework.  
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->  
+
+
+<!-- Execute the WriteRead test suite  -->
+<ISCSITS iterations = "1">
+   <FILENAME>ITDLoginDataDigest.xml</FILENAME>
+   <FILENAME>ITDClearUnitAttDataDigest.xml</FILENAME>
+   <FILENAME>ITDReadDataDigest1K.xml</FILENAME>
+   <FILENAME>ITDReadDataDigest32K.xml</FILENAME>
+   <FILENAME>ITDLogoutDataDigest.xml</FILENAME>
+</ISCSITS>

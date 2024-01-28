@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a test suite  File. It contains a series of tests, intended
+      to be run over and over.   Test cases will be run in the order that
+      they appear in this file. 
+        Test suite files have a ITS prefix by convention, and 
+        describe a set of iscsi test cases.  Test suite files 
+        are the top file in the test framework.  
+        
+       [Test Suite (ITS)]
+            +:: [Test Description 1 (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+            +:: [Test Description n (ITD)]
+                        +:: [Input PDU 1] <> [Output PDU 1]
+                        +:: [Input PDU n] <> [Output PDU n]
+                        
+ -->
+<!-- Test SCSI Writes in bridge mode
+        All tests performed using iSCSI Virtual Device®      -->
+       
+<ISCSITS iterations="1">
+   <!-- SCSI WRITE TESTS -->
+   <!-- Must login first before beginning tests  -->
+   <FILENAME>ITDLogin.xml</FILENAME>  
+   <!--TUR should be done before attempting reads  -->
+   <FILENAME>ITDClearUnitAtt2.xml</FILENAME> 
+   <FILENAME>ITDWrite0Brg.xml</FILENAME>
+   <FILENAME>ITDWrite512BBrg.xml</FILENAME>
+   <FILENAME>ITDWrite512BIBrg.xml</FILENAME>
+   <FILENAME>ITDWrite1536BBrg.xml</FILENAME>
+   <FILENAME>ITDWrite1536BIBrg.xml</FILENAME> 
+   <FILENAME>ITDWrite64K32KIBrg.xml</FILENAME>
+   <FILENAME>ITDWriteOutOfRangeBrg.xml</FILENAME> 
+   <FILENAME>ITDWriteMultiDataBrg.xml</FILENAME> 
+   <FILENAME>ITDWriteHoldStatusBrg.xml</FILENAME>
+   <FILENAME>ITDWriteOOOBrg.xml</FILENAME> 
+   <FILENAME>ITDWriteOverrunBrg.xml</FILENAME> 
+   <FILENAME>ITDWriteUnsolicitedBrg.xml</FILENAME>
+   <FILENAME>ITDWritePartialOverlapBrg.xml</FILENAME>
+   <FILENAME>ITDWriteCompleteOverlapBrg.xml</FILENAME> 
+   <FILENAME>ITDWritePartialOverlapOOOBrg.xml</FILENAME>
+   <FILENAME>ITDWrite1MBrg.xml</FILENAME>
+   <FILENAME>ITDWriteMultiCmdBrg.xml</FILENAME>
+   <FILENAME>ITDWriteMultiCmdOOOBrg.xml</FILENAME>  
+   <FILENAME>ITDWriteNENFDataBrg.xml</FILENAME>
+   <FILENAME>ITDWriteBadTTTBrg.xml</FILENAME>   
+   <FILENAME>ITDWriteBadITTBrg.xml</FILENAME>
+   <FILENAME>ITDLogout.xml</FILENAME>
+</ISCSITS>

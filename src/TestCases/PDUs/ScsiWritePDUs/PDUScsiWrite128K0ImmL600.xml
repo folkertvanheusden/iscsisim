@@ -1,0 +1,28 @@
+<!-- Filename:       PDUScsiWrite128K0ImmL600.xml       -->
+<!-- Command:        0x01 - SCSI command               -->
+<!-- Tfer Size:      128KiB                            -->
+<!-- Immediate data: No                                -->
+<!-- Function:       Write 128K bytes to LUN 1, LBA 600, 0 Immediate       -->
+
+<!-- All values are HEX -->
+
+<ISCSIPDU>
+    <BHS>                               <!-- basic header segment start      -->
+        <DWORD1>01A00000</DWORD1>       <!-- operation code                  -->
+        <AHSLEN>00</AHSLEN>             <!-- additional header seg. length   -->
+        <DATASEGLEN>000000</DATASEGLEN> <!-- data segment length             -->
+        <LUN>0001000000000000</LUN>     <!-- logical unit number             -->
+        <ITT>BA4E</ITT>             <!-- initiator task tag              -->
+        <DW20>00020000</DW20>           <!-- expected data trans. length     -->
+        <DW24>$CMD_SN</DW24>            <!-- command sequence number         -->
+        <DW28>$EXP_STAT_SN</DW28>       <!-- expected status sequence num    -->
+        <DW32>2A000000</DW32>           <!-- command descriptor block start- WRITE (10) -->
+        <DW36>06000001</DW36>           <!-- LBA = 600h                      -->
+        <DW40>00000000</DW40>           <!-- write 256 blocks: 128K bytes     -->
+        <DW44>00000000</DW44>           <!-- command descriptor block end    -->
+    </BHS>                              <!-- basic header segment end        -->
+    <!-- AHS is not represented -->
+    <HEADERDIGEST />
+    <DATA />                  
+    <DATADIGEST />
+</ISCSIPDU>

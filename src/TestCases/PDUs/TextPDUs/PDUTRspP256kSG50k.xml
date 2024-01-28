@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDUTRspP256kSG50k.xml                      -->
+<!-- Command:        0x24 - Text Request                     -->
+<!-- Tfer Size: Bhs-Size + 20                                 -->
+<!-- Immediate data: No                               -->
+<!-- Function:       Text Response to negotiate an 256K Partial size and a 50K SG Size -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>24800000</DWORD1> <!-- Final bit set  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>20</DATASEGLEN>
+		<LUN>0000000100000000</LUN>	   
+		<ITT>$ITT</ITT>
+		<DW20>ffffffff</DW20>   <!-- Appropriate value when F bit is set  -->
+		<DW24>$X</DW24>
+		<DW28>$X</DW28>
+		<DW32>$X</DW32>
+		<DW36>$X</DW36>
+		<DW40>$X</DW40>
+		<DW44>$X</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="22"> 
+	   <FILE>Binaries\treqp256kSG50k.bin</FILE> 
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>

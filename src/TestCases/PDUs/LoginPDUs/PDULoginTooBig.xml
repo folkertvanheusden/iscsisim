@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filename:       PDULoginTooBig.xml               -->
+<!-- Command:        0x03 - Login Request              -->
+<!-- Tfer Size:      BHS_SIZE + 64K                      -->
+<!-- Immediate data: Yes                               -->
+<!-- Function:  Login Request with a DataSegLen that is wayyy too big for a text transfer    -->
+<!-- All values are HEX -->
+<ISCSIPDU>
+	<BHS>
+		<DWORD1>43810000</DWORD1>  <!-- Transit to LON stage  -->
+		<AHSLEN>00</AHSLEN>
+		<DATASEGLEN>010000</DATASEGLEN> <!-- = 64K, text default is 16K -->
+		<LUN>4000013700000000</LUN>	   <!-- this is actually isid/tsih -->
+		<ITT>$ITT</ITT>
+		<DW20>00010000</DW20>
+		<DW24>$CMD_SN</DW24> <!-- CmdSN  -->
+		<DW28>$EXP_STAT_SN</DW28> <!-- ExpStatSN  -->
+		<DW32>0</DW32>
+		<DW36>0</DW36>
+		<DW40>0</DW40>
+		<DW44>0</DW44>
+	</BHS>
+	<!-- AHS is not represented -->
+	<HEADERDIGEST />
+	<DATA len="10000"> 
+	   <FILE>Binaries\Data64K.bin</FILE> <!-- What's in it doesn't matter, just that there's too much for the target -->
+	</DATA>    
+	<DATADIGEST />
+</ISCSIPDU>
