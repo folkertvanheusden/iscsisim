@@ -19,3 +19,5 @@ Release Information:
 -----------------------------
 
 Python 2.x -> 3.x conversion by Folkert van Heusden
+
+I've also did a few tweaks to make it run on POSIX systems (e.g. path seperators).
