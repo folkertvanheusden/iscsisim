@@ -70,7 +70,7 @@ class IscsiCfg:
         os.mkdir('LogFiles')
      
       tm = time.localtime()
-      logfilenm = "%d%02d%02d_%02d%02d_%d.%s" % (tm[0],tm[1],tm[2],tm[3],tm[4],tm[5],"log")
+      logfilenm = "%d%02d%02d_%02d%02d_%08d.%s" % (tm[0],tm[1],tm[2],tm[3],tm[4],tm[5],"log")
       
       self.cwd = os.getcwd()
       
